@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { ShieldAlert, FlaskConical, Hammer, FileText, ChevronRight } from 'lucide-react';
+import { ShieldAlert, FlaskConical, Hammer, FileText } from 'lucide-react';
 import { useI18n } from '@/i18n/I18nProvider';
 import { Button } from '@/components/ui/Button';
 
@@ -54,7 +54,6 @@ export function Sanierung() {
                       <span className="flex-1 text-[11px] font-semibold uppercase tracking-wider text-white">
                         {it}
                       </span>
-                      <ChevronRight className="h-4 w-4 text-white/40" />
                     </div>
                   </li>
                 );
