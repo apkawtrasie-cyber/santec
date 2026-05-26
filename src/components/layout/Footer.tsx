@@ -64,7 +64,7 @@ export function Footer() {
         <div className="mx-auto flex w-full max-w-7xl flex-col items-start justify-between gap-3 px-5 py-5 text-xs text-white/50 md:flex-row md:items-center md:px-8">
           <span>© {year} {company.name} – {t.footer.rights}</span>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white">{t.footer.impressum}</a>
+            <a href="/impressum" className="hover:text-white">{t.footer.impressum}</a>
             <a href="#" className="hover:text-white">{t.footer.datenschutz}</a>
           </div>
         </div>

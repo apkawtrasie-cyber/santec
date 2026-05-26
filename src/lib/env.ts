@@ -16,7 +16,7 @@ export const company = {
   zip: process.env.NEXT_PUBLIC_COMPANY_ZIP ?? '8630',
   city: process.env.NEXT_PUBLIC_COMPANY_CITY ?? 'Rüti ZH',
   country: process.env.NEXT_PUBLIC_COMPANY_COUNTRY ?? 'CH',
-  phone: process.env.NEXT_PUBLIC_COMPANY_PHONE ?? '+41 44 500 20 20',
+  phone: process.env.NEXT_PUBLIC_COMPANY_PHONE ?? '+41 79 787 73 477',
   email: process.env.NEXT_PUBLIC_COMPANY_EMAIL ?? 'info@santecgroup.ch',
 } as const;
 

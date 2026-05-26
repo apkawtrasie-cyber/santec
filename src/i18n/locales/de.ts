@@ -75,6 +75,18 @@ const de: Dictionary = {
     impressum: 'Impressum',
     datenschutz: 'Datenschutz',
   },
+  cookies: {
+    title: 'Cookie-Einstellungen',
+    description:
+      'Wir verwenden Cookies, um Ihnen die bestmögliche Erfahrung auf unserer Website zu bieten.',
+    acceptAll: 'Alle akzeptieren',
+    rejectAll: 'Ablehnen',
+    tableHeader: {
+      name: 'Name',
+      purpose: 'Zweck',
+      duration: 'Dauer',
+    },
+  },
 };
 
 export default de;

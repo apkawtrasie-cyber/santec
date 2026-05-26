@@ -62,4 +62,15 @@ export interface Dictionary {
     impressum: string;
     datenschutz: string;
   };
+  cookies: {
+    title: string;
+    description: string;
+    acceptAll: string;
+    rejectAll: string;
+    tableHeader: {
+      name: string;
+      purpose: string;
+      duration: string;
+    };
+  };
 }

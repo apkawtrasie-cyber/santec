@@ -75,6 +75,18 @@ const fr: Dictionary = {
     impressum: 'Mentions légales',
     datenschutz: 'Confidentialité',
   },
+  cookies: {
+    title: 'Paramètres des cookies',
+    description:
+      'Nous utilisons des cookies pour vous offrir la meilleure expérience sur notre site.',
+    acceptAll: 'Tout accepter',
+    rejectAll: 'Refuser',
+    tableHeader: {
+      name: 'Nom',
+      purpose: 'Objectif',
+      duration: 'Durée',
+    },
+  },
 };
 
 export default fr;

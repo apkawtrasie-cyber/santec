@@ -1,14 +1,16 @@
-/**
- * Słowne logo "santec" + podpis "group".
- * Łatwo wymienić na <Image src="/logo.svg" /> kiedy będzie gotowy plik SVG.
- */
+import Image from 'next/image';
+
 export function Logo({ className = '' }: { className?: string }) {
   return (
-    <div className={`flex flex-col leading-none ${className}`}>
-      <span className="text-2xl font-semibold tracking-tight text-white">
-        santec
-      </span>
-      <span className="-mt-1 text-xs italic text-white/60">group</span>
+    <div className={className}>
+      <Image
+        src="/santec.logo.black.png"
+        alt="Santec Group"
+        width={160}
+        height={48}
+        className="h-12 w-auto"
+        priority
+      />
     </div>
   );
 }

@@ -41,9 +41,11 @@ export function Header() {
 
         <div className="hidden items-center gap-4 lg:flex">
           <LanguageSwitcher />
-          <Button variant="ghost" size="md" withArrow={false}>
-            {t.nav.anfrage}
-          </Button>
+          <a href={`tel:+417978773477`}>
+            <Button variant="ghost" size="md" withArrow={false}>
+              {t.nav.anfrage}
+            </Button>
+          </a>
         </div>
 
         <button
@@ -75,9 +77,11 @@ export function Header() {
           ))}
           <div className="h-px w-full bg-white/10" />
           <LanguageSwitcher variant="menu" />
-          <Button variant="ghost" size="md" withArrow={false}>
-            {t.nav.anfrage}
-          </Button>
+          <a href="tel:+417978773477" className="w-full">
+            <Button variant="ghost" size="md" withArrow={false} className="w-full">
+              {t.nav.anfrage}
+            </Button>
+          </a>
         </div>
       </div>
     </header>
