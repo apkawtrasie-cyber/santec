@@ -35,16 +35,18 @@ export function Kontakt() {
   }
 
   return (
-    <section id="kontakt" className="bg-bg py-20">
-      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-12 px-5 md:px-8 lg:grid-cols-2">
+    <section id="kontakt" className="bg-bg py-14 sm:py-16 lg:py-24">
+      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-10 px-5 md:px-8 lg:grid-cols-2 lg:gap-12">
         <div>
-          <span className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/60">
+          <span className="inline-flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/60 sm:text-xs">
             <span className="h-px w-8 bg-white/40" /> {t.kontakt.eyebrow}
           </span>
-          <h2 className="mt-4 whitespace-pre-line text-3xl font-bold leading-tight text-white md:text-5xl">
+          <h2 className="mt-3 whitespace-pre-line text-3xl font-bold leading-tight text-white sm:mt-4 sm:text-4xl md:text-5xl">
             {t.kontakt.title}
           </h2>
-          <p className="mt-5 max-w-md text-white/70">{t.kontakt.text}</p>
+          <p className="mt-4 max-w-md text-sm text-white/70 sm:mt-5 sm:text-base">
+            {t.kontakt.text}
+          </p>
 
           <ul className="mt-8 space-y-4 text-sm text-white/80">
             <li className="flex items-start gap-3">
@@ -77,6 +79,7 @@ export function Kontakt() {
             variant="white"
             size="lg"
             disabled={status === 'loading'}
+            className="w-full sm:w-auto"
           >
             {t.kontakt.form.send}
           </Button>

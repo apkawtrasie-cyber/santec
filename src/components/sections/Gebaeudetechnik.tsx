@@ -14,25 +14,27 @@ export function Gebaeudetechnik() {
       className="relative overflow-hidden bg-brand-green-dark"
     >
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-50"
+        className="absolute inset-0 bg-cover bg-center opacity-30 sm:opacity-50"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1600&q=80')",
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-brand-green-dark via-brand-green-dark/80 to-brand-green-dark/30" />
+      <div className="absolute inset-0 bg-gradient-to-b from-brand-green-dark/90 via-brand-green-dark/85 to-brand-green-dark/70 lg:bg-gradient-to-r lg:from-brand-green-dark lg:via-brand-green-dark/80 lg:to-brand-green-dark/30" />
 
-      <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 gap-10 px-5 py-20 md:px-8 lg:grid-cols-2 lg:items-center">
+      <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 gap-8 px-5 py-14 sm:py-16 md:px-8 lg:grid-cols-2 lg:items-center lg:py-24">
         <div>
-          <span className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/80">
+          <span className="inline-flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/80 sm:text-xs">
             <span className="h-px w-8 bg-white/60" /> {t.gebaeudetechnik.eyebrow}
           </span>
-          <h2 className="mt-4 whitespace-pre-line text-3xl font-bold leading-tight text-white md:text-5xl">
+          <h2 className="mt-3 whitespace-pre-line text-3xl font-bold leading-tight text-white sm:mt-4 sm:text-4xl md:text-5xl">
             {t.gebaeudetechnik.title}
           </h2>
-          <p className="mt-5 max-w-md text-white/80">{t.gebaeudetechnik.text}</p>
+          <p className="mt-4 max-w-md text-sm text-white/80 sm:mt-5 sm:text-base">
+            {t.gebaeudetechnik.text}
+          </p>
 
-          <ul className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
+          <ul className="mt-7 grid grid-cols-2 gap-4 sm:mt-8 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
             {t.gebaeudetechnik.items.map((it, i) => {
               const Icon = ICONS[i] ?? Leaf;
               return (
@@ -49,7 +51,9 @@ export function Gebaeudetechnik() {
           </ul>
 
           <div className="mt-8">
-            <Button variant="ghost" size="lg">{t.gebaeudetechnik.cta}</Button>
+            <Button variant="ghost" size="lg" className="w-full sm:w-auto">
+              {t.gebaeudetechnik.cta}
+            </Button>
           </div>
         </div>
       </div>

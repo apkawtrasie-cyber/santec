@@ -22,7 +22,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-white/5 bg-bg/80 backdrop-blur">
-      <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-5 md:px-8">
+      <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-5 md:h-20 md:px-8">
         <a href="#home" className="shrink-0">
           <Logo />
         </a>
