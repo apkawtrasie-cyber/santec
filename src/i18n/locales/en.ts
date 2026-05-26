@@ -17,7 +17,7 @@ const en: Dictionary = {
     ctaGebaeudetechnik: 'Building Technology',
   },
   sanierung: {
-    eyebrow: 'Renovation',
+    eyebrow: 'Asbestos & Pollutant Remediation',
     title: 'Safety\ncomes first.',
     text: 'We are your specialist for professional asbestos and pollutant remediation. Reliable, certified and with utmost care.',
     items: ['Asbestos removal', 'Pollutant removal', 'Demolition', 'Disposal'],

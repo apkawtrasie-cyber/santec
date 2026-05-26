@@ -17,7 +17,7 @@ export const company = {
   city: process.env.NEXT_PUBLIC_COMPANY_CITY ?? 'Rüti ZH',
   country: process.env.NEXT_PUBLIC_COMPANY_COUNTRY ?? 'CH',
   phone: process.env.NEXT_PUBLIC_COMPANY_PHONE ?? '+41 79 787 73 477',
-  email: process.env.NEXT_PUBLIC_COMPANY_EMAIL ?? 'info@santecgroup.ch',
+  email: process.env.NEXT_PUBLIC_COMPANY_EMAIL ?? 'adamzapala79@gmail.com',
 } as const;
 
 /** Sekrety – tylko po stronie serwera. */

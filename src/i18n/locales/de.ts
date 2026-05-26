@@ -17,7 +17,7 @@ const de: Dictionary = {
     ctaGebaeudetechnik: 'Gebäudetechnik',
   },
   sanierung: {
-    eyebrow: 'Sanierung',
+    eyebrow: 'Asbest- & Schadstoffsanierung',
     title: 'Sicherheit\nhat Priorität.',
     text: 'Wir sind Ihr Spezialist für die fachgerechte Asbestsanierung und Schadstoffsanierung. Zuverlässig, zertifiziert und mit höchster Sorgfalt.',
     items: ['Asbestsanierung', 'Schadstoffsanierung', 'Rückbau', 'Entsorgung'],

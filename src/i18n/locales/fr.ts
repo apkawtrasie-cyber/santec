@@ -17,7 +17,7 @@ const fr: Dictionary = {
     ctaGebaeudetechnik: 'Technique du bâtiment',
   },
   sanierung: {
-    eyebrow: 'Rénovation',
+    eyebrow: 'Désamiantage & Dépollution',
     title: 'La sécurité\nest prioritaire.',
     text: 'Nous sommes votre spécialiste du désamiantage et de l’assainissement des polluants. Fiable, certifié et avec le plus grand soin.',
     items: ['Désamiantage', 'Polluants', 'Démolition', 'Élimination'],

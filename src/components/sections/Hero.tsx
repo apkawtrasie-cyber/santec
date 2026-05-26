@@ -20,7 +20,7 @@ export function Hero() {
         sizes="100vw"
         className="object-cover object-center"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-bg via-bg/85 to-bg/30" />
+      <div className="absolute inset-0 bg-gradient-to-b from-bg/90 via-bg/75 to-bg/50 lg:bg-gradient-to-r lg:from-bg lg:via-bg/85 lg:to-bg/20" />
 
       <div className="relative mx-auto w-full max-w-7xl px-5 py-14 sm:py-16 md:px-8 lg:py-28">
         <div className="max-w-lg">

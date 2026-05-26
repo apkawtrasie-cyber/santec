@@ -17,7 +17,7 @@ const it: Dictionary = {
     ctaGebaeudetechnik: 'Tecnica edile',
   },
   sanierung: {
-    eyebrow: 'Risanamento',
+    eyebrow: 'Bonifica Amianto & Inquinanti',
     title: 'La sicurezza\nè prioritaria.',
     text: 'Siamo il vostro specialista per la rimozione dell’amianto e degli inquinanti. Affidabile, certificato e con la massima cura.',
     items: ['Rimozione amianto', 'Rimozione inquinanti', 'Demolizione', 'Smaltimento'],
