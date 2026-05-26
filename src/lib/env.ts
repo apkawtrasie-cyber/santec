@@ -12,9 +12,9 @@ export const env = {
 
 export const company = {
   name: process.env.NEXT_PUBLIC_COMPANY_NAME ?? 'Santec Group GmbH',
-  street: process.env.NEXT_PUBLIC_COMPANY_STREET ?? 'Industriestrasse 5',
-  zip: process.env.NEXT_PUBLIC_COMPANY_ZIP ?? '8340',
-  city: process.env.NEXT_PUBLIC_COMPANY_CITY ?? 'Hinwil',
+  street: process.env.NEXT_PUBLIC_COMPANY_STREET ?? 'Alt-Ferrachstrasse 33b',
+  zip: process.env.NEXT_PUBLIC_COMPANY_ZIP ?? '8630',
+  city: process.env.NEXT_PUBLIC_COMPANY_CITY ?? 'Rüti ZH',
   country: process.env.NEXT_PUBLIC_COMPANY_COUNTRY ?? 'CH',
   phone: process.env.NEXT_PUBLIC_COMPANY_PHONE ?? '+41 44 500 20 20',
   email: process.env.NEXT_PUBLIC_COMPANY_EMAIL ?? 'info@santecgroup.ch',
