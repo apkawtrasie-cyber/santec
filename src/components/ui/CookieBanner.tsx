@@ -1,36 +1,18 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { Cookie } from 'lucide-react';
 import { useI18n } from '@/i18n/I18nProvider';
 
 const CONSENT_KEY = 'cookie-consent';
 
-const COOKIES = [
-  {
-    name: '_session',
-    purpose: { de: 'Sitzungsverwaltung', en: 'Session management', fr: 'Gestion de session', it: 'Gestione sessione' },
-    duration: { de: 'Sitzung', en: 'Session', fr: 'Session', it: 'Sessione' },
-  },
-  {
-    name: '_locale',
-    purpose: { de: 'Spracheinstellung speichern', en: 'Save language preference', fr: 'Mémoriser la langue', it: 'Salva lingua' },
-    duration: { de: '1 Jahr', en: '1 year', fr: '1 an', it: '1 anno' },
-  },
-  {
-    name: 'cookie-consent',
-    purpose: { de: 'Cookie-Einwilligung speichern', en: 'Store cookie consent', fr: 'Mémoriser le consentement', it: 'Salva consenso cookie' },
-    duration: { de: '1 Jahr', en: '1 year', fr: '1 an', it: '1 anno' },
-  },
-] as const;
-
 export function CookieBanner() {
-  const { t, locale } = useI18n();
+  const { t } = useI18n();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem(CONSENT_KEY);
-      if (!saved) setVisible(true);
+      if (!localStorage.getItem(CONSENT_KEY)) setVisible(true);
     }
   }, []);
 
@@ -45,53 +27,31 @@ export function CookieBanner() {
     setVisible(false);
   }
 
-  const lang = locale;
-
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-bg shadow-2xl">
-      <div className="mx-auto max-w-7xl px-5 py-6 md:px-8">
-        <div className="mb-4 flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
-          <h2 className="text-base font-semibold text-white">{t.cookies.title}</h2>
-          <p className="text-sm text-white/70 sm:max-w-lg">{t.cookies.description}</p>
+    <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-[#1a1f1e] shadow-2xl">
+      <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-5 sm:flex-row sm:items-center sm:gap-6 md:px-8">
+        <Cookie className="hidden h-8 w-8 shrink-0 text-white/50 sm:block" />
+
+        <div className="flex-1">
+          <p className="text-sm leading-relaxed text-white/80">
+            {t.cookies.description}
+          </p>
+          <div className="mt-2 flex gap-4 text-xs text-white/50">
+            <a href="#" className="hover:text-white transition">{t.footer.datenschutz}</a>
+            <a href="/impressum" className="hover:text-white transition">{t.footer.impressum}</a>
+          </div>
         </div>
 
-        <div className="overflow-x-auto rounded-md border border-white/10">
-          <table className="w-full text-left text-xs text-white/80">
-            <thead className="border-b border-white/10 bg-white/5">
-              <tr>
-                <th className="px-4 py-2 font-semibold uppercase tracking-wider text-white/60">
-                  {t.cookies.tableHeader.name}
-                </th>
-                <th className="px-4 py-2 font-semibold uppercase tracking-wider text-white/60">
-                  {t.cookies.tableHeader.purpose}
-                </th>
-                <th className="px-4 py-2 font-semibold uppercase tracking-wider text-white/60">
-                  {t.cookies.tableHeader.duration}
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {COOKIES.map((c) => (
-                <tr key={c.name} className="border-b border-white/5 last:border-0">
-                  <td className="px-4 py-2 font-mono">{c.name}</td>
-                  <td className="px-4 py-2">{c.purpose[lang]}</td>
-                  <td className="px-4 py-2">{c.duration[lang]}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-
-        <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:justify-end">
+        <div className="flex shrink-0 gap-3">
           <button
             onClick={reject}
-            className="rounded-md border border-white/20 px-6 py-2.5 text-sm font-medium text-white/70 transition hover:border-white/40 hover:text-white"
+            className="rounded px-5 py-2 text-sm font-medium text-white/70 bg-white/10 transition hover:bg-white/20 hover:text-white"
           >
             {t.cookies.rejectAll}
           </button>
           <button
             onClick={accept}
-            className="rounded-md bg-brand-green px-6 py-2.5 text-sm font-semibold text-bg transition hover:brightness-110"
+            className="rounded px-5 py-2 text-sm font-semibold text-bg bg-brand-green transition hover:brightness-110"
           >
             {t.cookies.acceptAll}
           </button>
