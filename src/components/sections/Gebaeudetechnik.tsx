@@ -20,6 +20,7 @@ export function Gebaeudetechnik() {
         quality={85}
         sizes="100vw"
         className="object-cover object-right opacity-50"
+        aria-hidden="true"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-brand-green-dark/95 via-brand-green-dark/70 to-brand-green-dark/40 lg:bg-gradient-to-r lg:from-brand-green-dark lg:via-brand-green-dark/80 lg:to-brand-green-dark/20" />
 

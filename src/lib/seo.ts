@@ -22,7 +22,7 @@ export function buildLocalBusinessJsonLd() {
     },
     areaServed: company.country,
     description:
-      'Santec Group – Sanierung (Asbest, Schadstoffe, Rückbau, Entsorgung) und Gebäudetechnik (Heizung, Lüftung, Sanitär, Energielösungen) in der Schweiz.',
+      'Santec Group – Asbest- & Schadstoffsanierung, Rückbau, Entsorgung sowie Gebäudetechnik: Kälteanlagen, Sanitär, Elektro- & Gebäudeinstallationen, Photovoltaik- & Energiesysteme. Zertifiziert und suva-konform. Schweiz.',
   } as const;
 }
 

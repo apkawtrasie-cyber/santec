@@ -22,6 +22,7 @@ export function Sanierung() {
         quality={85}
         sizes="100vw"
         className="object-cover object-right opacity-50"
+        aria-hidden="true"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-brand-red-dark/95 via-brand-red-dark/70 to-brand-red-dark/40 lg:bg-gradient-to-r lg:from-brand-red-dark lg:via-brand-red-dark/80 lg:to-brand-red-dark/20" />
 
