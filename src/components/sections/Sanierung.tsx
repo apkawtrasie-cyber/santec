@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { ShieldAlert, FlaskConical, Hammer, FileText, ChevronRight } from 'lucide-react';
 import { useI18n } from '@/i18n/I18nProvider';
 import { Button } from '@/components/ui/Button';
@@ -61,9 +62,11 @@ export function Sanierung() {
             </ul>
 
             <div className="mt-8">
-              <Button variant="ghost" size="lg" className="w-full sm:w-auto">
-                {t.sanierung.cta}
-              </Button>
+              <Link href="/sanierung">
+                <Button variant="ghost" size="lg" className="w-full sm:w-auto">
+                  {t.sanierung.cta}
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
