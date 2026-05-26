@@ -2,12 +2,12 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Snowflake, Droplets, Zap, Sun, ChevronRight } from 'lucide-react';
+import { Wind, Flame, Sun, Droplets, ChevronRight } from 'lucide-react';
 import { useI18n } from '@/i18n/I18nProvider';
 import { Button } from '@/components/ui/Button';
 
-const ICONS = [Snowflake, Droplets, Zap, Sun];
-const SLUGS = ['kaelteanlagen', 'sanitaer', 'elektro', 'photovoltaik'];
+const ICONS = [Wind, Flame, Sun, Droplets];
+const SLUGS = ['lueftung-klima', 'heizung', 'solar', 'sanitaer'];
 
 export function Gebaeudetechnik() {
   const { t } = useI18n();
@@ -43,7 +43,7 @@ export function Gebaeudetechnik() {
           <div>
             <ul className="mt-7 overflow-hidden rounded-xl border border-white/20 sm:mt-8">
               {t.gebaeudetechnik.items.map((item, i) => {
-                const Icon = ICONS[i] ?? Snowflake;
+                const Icon = ICONS[i] ?? Wind;
                 const slug = SLUGS[i];
                 return (
                   <li key={slug} className="border-b border-white/10 last:border-0">

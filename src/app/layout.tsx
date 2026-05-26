@@ -24,6 +24,18 @@ export const metadata: Metadata = {
     locale: 'de_CH',
     url: env.siteUrl,
     siteName: 'Santec Group',
+    images: [
+      {
+        url: '/logo.santec.png',
+        width: 1200,
+        height: 630,
+        alt: 'Santec Group – Sanierung & Gebäudetechnik',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/logo.santec.png'],
   },
 };
 

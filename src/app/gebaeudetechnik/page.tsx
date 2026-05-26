@@ -149,12 +149,12 @@ export default function GebaeudetechnikOverviewPage() {
                     <Mail className="h-4 w-4 text-brand-green" />
                     {company.email}
                   </a>
-                  <Link
-                    href="/#kontakt"
+                  <a
+                    href={`tel:${company.phone.replace(/\s+/g, '')}`}
                     className="mt-5 block w-full rounded-md bg-brand-green px-4 py-3 text-center text-sm font-semibold text-bg transition hover:brightness-110"
                   >
                     Kontaktieren Sie uns jetzt
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>

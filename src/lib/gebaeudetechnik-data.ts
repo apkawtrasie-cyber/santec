@@ -12,8 +12,8 @@ export type GtCategory = {
 
 export const GT_CATEGORIES: GtCategory[] = [
   {
-    slug: 'kaelteanlagen',
-    title: 'Lüftungs-, Klima- und Kälteanlagen',
+    slug: 'lueftung-klima',
+    title: 'Lüftung & Klima',
     tagline: 'Frische Luft. Perfekte Raumtemperatur.',
     imageUrl:
       'https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=1600&q=80',
@@ -30,11 +30,11 @@ export const GT_CATEGORIES: GtCategory[] = [
     sections: [
       {
         heading: 'Unser Ansatz',
-        text: 'Wir sind kein gewöhnlicher Installationsbetrieb. Als unabhängige Experten und HLKS-Ingenieure betrachten wir die gesamte Gebäudetechnik als ein vernetztes Gesamtsystem. Wir verkaufen keine Standardgeräte – wir planen, optimieren und kontrollieren Ihre Anlagen, damit sie absolut störungsfrei, energieeffizient und mit minimalen Betriebskosten laufen.',
+        text: 'Als unabhängige Experten und HLKS-Ingenieure betrachten wir die gesamte Gebäudetechnik als ein vernetztes Gesamtsystem. Wir verkaufen keine Standardgeräte – wir planen, optimieren und kontrollieren Ihre Anlagen, damit sie absolut störungsfrei, energieeffizient und mit minimalen Betriebskosten laufen.',
       },
       {
         heading: 'Planung und Konzeption',
-        text: 'Der Grundstein für jedes erfolgreiche Bauvorhaben. Wir entwickeln massgeschneiderte und zukunftssichere Konzepte für die gesamte Haustechnik, exakt abgestimmt auf die spezifischen Anforderungen Ihres Gebäudes.',
+        text: 'Wir entwickeln massgeschneiderte und zukunftssichere Konzepte für Lüftungs- und Klimasysteme, exakt abgestimmt auf die spezifischen Anforderungen Ihres Gebäudes – von der einfachen Wohnraumlüftung bis zur komplexen industriellen Klimatisierung.',
       },
       {
         heading: 'Energieeffizienz- und Betriebsoptimierungen (eBO)',
@@ -42,7 +42,77 @@ export const GT_CATEGORIES: GtCategory[] = [
       },
       {
         heading: 'Unabhängige Gutachten und Expertisen',
-        text: 'Als zertifizierte, neutrale Gutachter erstellen wir fundierte und rechtssichere technische Expertisen für Eigentümer, Liegenschaftsverwaltungen, Versicherungen und Gerichte. Präzise Ursachenanalyse bei Systemausfällen, Fehlfunktionen oder mangelhafter Leistung von Lüftungs- und Kälteanlagen.',
+        text: 'Als zertifizierte, neutrale Gutachter erstellen wir fundierte und rechtssichere technische Expertisen. Präzise Ursachenanalyse bei Systemausfällen, Fehlfunktionen oder mangelhafter Leistung von Lüftungs- und Kälteanlagen.',
+      },
+    ],
+  },
+  {
+    slug: 'heizung',
+    title: 'Heizung',
+    tagline: 'Effiziente Wärme. Nachhaltig geplant.',
+    imageUrl:
+      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1600&q=80',
+    intro:
+      'Moderne und energieeffiziente Heizungssysteme für Ihr Gebäude. Als unabhängige HLKS-Ingenieure planen und optimieren wir Heizungsanlagen ohne Bindung an Hersteller – von der Wärmepumpe über Fernwärme bis zur Pelletsheizung. Unser Fokus liegt auf dem hydraulischen Abgleich und der Systemintegration für maximale Effizienz.',
+    features: [
+      'Wärmepumpen (Luft/Wasser, Erdwärme)',
+      'Fernwärme-Übergabestationen',
+      'Pelletsheizungen & Biomasse',
+      'Hydraulischer Abgleich',
+      'Heizungsoptimierung & eBO',
+      'Sanierungs- und Ersatzkonzepte',
+    ],
+    sections: [
+      {
+        heading: 'Unser Ansatz',
+        text: 'Als unabhängige HLKS-Ingenieure sind wir an keinen Hersteller gebunden. Wir wählen für Sie die optimale Heizungstechnologie aus – basierend auf Ihrem Gebäude, Ihrem Budget und den aktuellen Energiepreisen. Unser Ziel ist immer der maximale Wirkungsgrad bei minimalen Betriebskosten.',
+      },
+      {
+        heading: 'Planung und Konzeption von Heizungsanlagen',
+        text: 'Von der Auslegungsberechnung bis zur Planung der Rohrführung: Wir entwickeln ein massgeschneidertes Heizungskonzept für Ihr Gebäude. Besonderer Fokus liegt auf dem hydraulischen Abgleich, damit jeder Raum gleichmässig und effizient mit Wärme versorgt wird.',
+      },
+      {
+        heading: 'Heizungsersatz und Sanierungskonzepte',
+        text: 'Alte Ölheizung oder defektes Heizsystem? Wir analysieren Ihren Bedarf und entwickeln herstellerunabhängige Strategien für den Heizungsersatz – inklusive Förderberatung (Bundes- und Kantonsbeiträge) für den Wechsel auf erneuerbare Energien.',
+      },
+      {
+        heading: 'Energieeffizienz- und Betriebsoptimierungen (eBO)',
+        text: 'Ihre bestehende Heizungsanlage kann effizienter laufen. Wir überprüfen die Einstellparameter, führen den hydraulischen Abgleich durch und optimieren die Betriebszeiten – spürbare Einsparungen ohne grossen Investitionsaufwand.',
+      },
+    ],
+  },
+  {
+    slug: 'solar',
+    title: 'Solar & Photovoltaik',
+    tagline: 'Sauber. Effizient. Zukunftssicher.',
+    imageUrl:
+      'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80',
+    intro:
+      'Nachhaltige Stromerzeugung direkt auf Ihrem Dach. Wir planen hocheffiziente Photovoltaikanlagen, optimieren Stromspeichersysteme und konzipieren intelligente Lösungen für die E-Mobilität (Ladestationen/Wallboxen).',
+    features: [
+      'Photovoltaikanlagen (PV)',
+      'Batteriespeichersysteme',
+      'E-Mobilität & Wallboxen',
+      'Netzeinspeisung & Eigenverbrauch',
+      'Ertragsanalysen & Renditeberechnung',
+      'Wartung und Monitoring',
+    ],
+    sections: [
+      {
+        heading: 'Unser Ansatz',
+        text: 'Als unabhängige Energieexperten planen wir hocheffiziente PV-Anlagen ohne Bindung an einen Hersteller – immer mit dem Ziel, maximalen Eigenverbrauch und minimale Amortisationszeit zu erreichen.',
+      },
+      {
+        heading: 'Planung und Konzeption von PV-Anlagen',
+        text: 'Wir analysieren Ihre Dachfläche, Ausrichtung und Ihren Stromverbrauch und berechnen den optimalen Anlagentyp. Das Ergebnis: ein massgeschneidertes Solarkonzept mit realistischer Ertragsanalyse und Amortisationsrechnung.',
+      },
+      {
+        heading: 'Sanierungs- und Modernisierungskonzepte',
+        text: 'Bestehende PV-Anlage veraltet? Wir entwickeln herstellerunabhängige Strategien für die Modernisierung und Leistungssteigerung Ihrer Solaranlage – inklusive Integration von Batteriespeichern und Wallboxen für E-Mobilität.',
+      },
+      {
+        heading: 'Unabhängige Gutachten und Expertisen',
+        text: 'Als zertifizierte, neutrale Gutachter prüfen wir PV-Anlagen nach geltenden Normen und erstellen rechtssichere Expertisen. Technische Bauabnahme, Zweitmeinungen zu Kostenvoranschlägen und Ertragsanalysen.',
       },
     ],
   },
@@ -65,89 +135,19 @@ export const GT_CATEGORIES: GtCategory[] = [
     sections: [
       {
         heading: 'Unser Ansatz',
-        text: 'Wir sind kein gewöhnlicher Installationsbetrieb. Als unabhängige Experten und HLKS-Ingenieure betrachten wir die gesamte Gebäudetechnik als ein vernetztes Gesamtsystem. Wir verkaufen keine Standardgeräte – wir planen, optimieren und kontrollieren Ihre Anlagen, damit sie absolut störungsfrei, energieeffizient und mit minimalen Betriebskosten laufen.',
+        text: 'Als unabhängige HLKS-Ingenieure betrachten wir Sanitäranlagen als Teil des vernetzten Gebäudesystems. Wir planen, optimieren und kontrollieren Ihre Installationen für störungsfreien, hygienisch einwandfreien Betrieb.',
       },
       {
         heading: 'Planung und Konzeption',
-        text: 'Der Grundstein für jedes erfolgreiche Bauvorhaben. Wir entwickeln massgeschneiderte und zukunftssichere Konzepte für Sanitäranlagen, exakt abgestimmt auf die spezifischen Anforderungen Ihres Gebäudes.',
+        text: 'Wir entwickeln massgeschneiderte Konzepte für Sanitäranlagen, exakt abgestimmt auf die Anforderungen Ihres Gebäudes – von der Trinkwasserinstallation bis zum Entwässerungssystem.',
       },
       {
         heading: 'Energieeffizienz und Wasseroptimierung',
-        text: 'Wir analysieren bestehende Sanitäranlagen und spüren versteckte Einsparpotenziale auf. Durch eine systematische Feinabstimmung der Systeme im laufenden Betrieb senken wir Ihre Wasser- und Energiekosten nachhaltig.',
+        text: 'Wir analysieren bestehende Sanitäranlagen und spüren versteckte Einsparpotenziale auf. Durch systematische Feinabstimmung senken wir Ihre Wasser- und Energiekosten nachhaltig.',
       },
       {
         heading: 'Unabhängige Gutachten und Expertisen',
-        text: 'Als zertifizierte, neutrale Gutachter erstellen wir fundierte technische Expertisen für Eigentümer, Liegenschaftsverwaltungen und Versicherungen. Inklusive Abnahme und Garantieprüfung nach geltenden SIA-Normen.',
-      },
-    ],
-  },
-  {
-    slug: 'elektro',
-    title: 'Elektro- und Gebäudeinstallationen',
-    tagline: 'Smart. Sicher. Vernetzt.',
-    imageUrl:
-      'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1600&q=80',
-    intro:
-      'Umfassende technische Beurteilung und Planung moderner Elektroinfrastrukturen. Wir integrieren Stark- und Schwachstromanlagen, Sicherheitsbeleuchtungen und moderne Gebäudeautomationssysteme (Smart Home) in das Gesamtkonzept.',
-    features: [
-      'Starkstrom- und Schwachstromanlagen',
-      'Sicherheitsbeleuchtung & Notlicht',
-      'Gebäudeautomation (Smart Home)',
-      'Schalttafelbau und -prüfung',
-      'Blitzschutz und Erdung',
-      'Ladeinfrastruktur (EV)',
-    ],
-    sections: [
-      {
-        heading: 'Unser Ansatz',
-        text: 'Wir sind kein gewöhnlicher Installationsbetrieb. Als unabhängige Experten betrachten wir die gesamte Gebäudetechnik als ein vernetztes Gesamtsystem. Wir planen, optimieren und kontrollieren Ihre Elektroanlagen, damit sie sicher, zukunftsfähig und energieeffizient sind.',
-      },
-      {
-        heading: 'Planung und Konzeption',
-        text: 'Der Grundstein für jedes erfolgreiche Bauvorhaben. Wir entwickeln massgeschneiderte Konzepte für die gesamte Elektroinstallation, exakt abgestimmt auf die Anforderungen Ihres Gebäudes – inklusive BIM-Integration auf Wunsch.',
-      },
-      {
-        heading: 'Koordination und Begleitung von Projekten',
-        text: 'Alles im Griff von der Idee bis zur Übergabe. Wir übernehmen die fachliche Koordination aller beteiligten Gewerke, sichern die Qualitätsstandards und begleiten die finale Inbetriebsetzung der elektrischen Anlagen.',
-      },
-      {
-        heading: 'Unabhängige Gutachten und Expertisen',
-        text: 'Als zertifizierte, neutrale Gutachter erstellen wir fundierte Expertisen für Eigentümer, Liegenschaftsverwaltungen und Versicherungen. Technische Bauabnahme und Garantieprüfung nach SIA-Normen.',
-      },
-    ],
-  },
-  {
-    slug: 'photovoltaik',
-    title: 'Photovoltaik- und Energiesysteme',
-    tagline: 'Sauber. Effizient. Zukunftssicher.',
-    imageUrl:
-      'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80',
-    intro:
-      'Nachhaltige Stromerzeugung direkt auf Ihrem Dach. Wir planen hocheffiziente Photovoltaikanlagen, optimieren Stromspeichersysteme und konzipieren intelligente Lösungen für die E-Mobilität (Ladestationen/Wallboxen).',
-    features: [
-      'Photovoltaikanlagen (PV)',
-      'Batteriespeichersysteme',
-      'E-Mobilität & Wallboxen',
-      'Netzeinspeisung & Eigenverbrauch',
-      'Ertragsanalysen & Renditeberechnung',
-      'Wartung und Monitoring',
-    ],
-    sections: [
-      {
-        heading: 'Unser Ansatz',
-        text: 'Wir sind kein gewöhnlicher Installationsbetrieb. Als unabhängige Energieexperten planen wir hocheffiziente PV-Anlagen ohne Bindung an einen Hersteller – immer mit dem Ziel, maximalen Eigenverbrauch und minimale Amortisationszeit zu erreichen.',
-      },
-      {
-        heading: 'Sanierungs- und Modernisierungskonzepte',
-        text: 'Zukunftssichere Planung für bestehende Immobilien. Wir entwickeln herstellerunabhängige Strategien für die energetische Sanierung und die Dekarbonisierung (CO₂-Reduktion) Ihres Gebäudeparks.',
-      },
-      {
-        heading: 'Energieeffizienz- und Betriebsoptimierungen (eBO)',
-        text: 'Ihre Energieanlage kann mehr leisten. Wir analysieren bestehende PV-Systeme im Detail, spüren Leistungsverluste auf und führen eine systematische Feinabstimmung durch, um Ihren Solarertrag zu maximieren.',
-      },
-      {
-        heading: 'Unabhängige Gutachten und Expertisen',
-        text: 'Als zertifizierte, neutrale Gutachter prüfen wir PV-Anlagen nach geltenden Normen und erstellen rechtssichere Expertisen. Technische Bauabnahme, Zweitmeinungen zu Kostenvoranschlägen und Ertragsanalysen.',
+        text: 'Als zertifizierte, neutrale Gutachter erstellen wir fundierte technische Expertisen für Eigentümer, Liegenschaftsverwaltungen und Versicherungen. Inklusive Abnahme und Garantieprüfung nach SIA-Normen.',
       },
     ],
   },

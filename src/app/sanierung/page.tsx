@@ -245,12 +245,12 @@ export default function SanierungOverviewPage() {
                   Gehen Sie kein Risiko ein. Kontaktieren Sie uns jetzt für eine professionelle
                   Beratung und ein sicheres Sanierungskonzept.
                 </p>
-                <Link
-                  href="/#kontakt"
+                <a
+                  href={`tel:${company.phone.replace(/\s+/g, '')}`}
                   className="mt-6 inline-flex items-center gap-2 rounded-md bg-brand-red px-5 py-3 text-sm font-semibold text-white transition hover:brightness-110"
                 >
                   Kontaktieren Sie uns jetzt
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -276,12 +276,12 @@ export default function SanierungOverviewPage() {
                     <Mail className="h-4 w-4 text-brand-red" />
                     {company.email}
                   </a>
-                  <Link
-                    href="/#kontakt"
+                  <a
+                    href={`tel:${company.phone.replace(/\s+/g, '')}`}
                     className="mt-5 block w-full rounded-md bg-brand-red px-4 py-3 text-center text-sm font-semibold text-white transition hover:brightness-110"
                   >
                     Anfrage senden
-                  </Link>
+                  </a>
                 </div>
 
                 <div className="rounded-xl border border-white/10 bg-bg-soft p-6">
