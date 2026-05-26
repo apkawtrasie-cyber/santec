@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { ShieldAlert, FlaskConical, Hammer, FileText } from 'lucide-react';
 import { useI18n } from '@/i18n/I18nProvider';
 import { Button } from '@/components/ui/Button';
@@ -13,12 +14,13 @@ export function Sanierung() {
       id="sanierung"
       className="relative overflow-hidden bg-brand-red-dark"
     >
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-25 sm:opacity-40"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1600&q=80')",
-        }}
+      <Image
+        src="/asbest-santecgroup.png"
+        alt=""
+        fill
+        quality={85}
+        sizes="100vw"
+        className="object-cover object-center opacity-40"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-brand-red-dark/90 via-brand-red-dark/85 to-brand-red-dark/70 lg:bg-gradient-to-r lg:from-brand-red-dark lg:via-brand-red-dark/80 lg:to-brand-red-dark/30" />
 

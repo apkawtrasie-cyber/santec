@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { Snowflake, Droplets, Zap, Sun, ArrowRight } from 'lucide-react';
 import { useI18n } from '@/i18n/I18nProvider';
@@ -12,12 +13,13 @@ export function Gebaeudetechnik() {
   const { t } = useI18n();
   return (
     <section id="gebaeudetechnik" className="relative overflow-hidden bg-brand-green-dark">
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-20"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1600&q=80')",
-        }}
+      <Image
+        src="/klima.santecgroup.png"
+        alt=""
+        fill
+        quality={85}
+        sizes="100vw"
+        className="object-cover object-center opacity-30"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-brand-green-dark/95 to-brand-green-dark/80" />
 
