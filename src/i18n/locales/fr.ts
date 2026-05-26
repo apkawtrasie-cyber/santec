@@ -13,7 +13,7 @@ const fr: Dictionary = {
     title: 'Deux compétences.\nUne exigence.',
     subtitle:
       'Santec Group, c’est l’assainissement professionnel et la technique du bâtiment tournée vers l’avenir. Sûr. Propre. Durable.',
-    ctaSanierung: 'Rénovation',
+    ctaSanierung: 'Désamiantage',
     ctaGebaeudetechnik: 'Technique du bâtiment',
   },
   sanierung: {

@@ -13,7 +13,7 @@ const de: Dictionary = {
     title: 'Zwei Kompetenzen.\nEin Anspruch.',
     subtitle:
       'Die Santec Group steht für professionelle Sanierungen und zukunftsorientierte Gebäudetechnik. Sicher. Sauber. Nachhaltig.',
-    ctaSanierung: 'Sanierung',
+    ctaSanierung: 'Asbest- & Schadstoffsanierung',
     ctaGebaeudetechnik: 'Gebäudetechnik',
   },
   sanierung: {

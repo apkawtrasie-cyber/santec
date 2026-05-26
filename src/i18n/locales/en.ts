@@ -13,7 +13,7 @@ const en: Dictionary = {
     title: 'Two competencies.\nOne standard.',
     subtitle:
       'Santec Group stands for professional renovation and forward-looking building technology. Safe. Clean. Sustainable.',
-    ctaSanierung: 'Renovation',
+    ctaSanierung: 'Asbestos Remediation',
     ctaGebaeudetechnik: 'Building Technology',
   },
   sanierung: {

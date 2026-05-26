@@ -13,7 +13,7 @@ const it: Dictionary = {
     title: 'Due competenze.\nUn’unica esigenza.',
     subtitle:
       'Santec Group significa risanamento professionale e tecnica edile orientata al futuro. Sicuro. Pulito. Sostenibile.',
-    ctaSanierung: 'Risanamento',
+    ctaSanierung: 'Bonifica Amianto',
     ctaGebaeudetechnik: 'Tecnica edile',
   },
   sanierung: {
