@@ -1,0 +1,28 @@
+/**
+ * Centralny dostęp do zmiennych środowiskowych.
+ * Nigdy nie czytaj `process.env.*` bezpośrednio z komponentów – używaj tych funkcji.
+ * Dzięki temu jednym przełącznikiem (np. `NEXT_PUBLIC_ALLOW_INDEXING`) sterujemy całą aplikacją.
+ */
+
+export const env = {
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000',
+  allowIndexing:
+    (process.env.NEXT_PUBLIC_ALLOW_INDEXING ?? 'false').toLowerCase() === 'true',
+} as const;
+
+export const company = {
+  name: process.env.NEXT_PUBLIC_COMPANY_NAME ?? 'Santec Group GmbH',
+  street: process.env.NEXT_PUBLIC_COMPANY_STREET ?? 'Industriestrasse 5',
+  zip: process.env.NEXT_PUBLIC_COMPANY_ZIP ?? '8340',
+  city: process.env.NEXT_PUBLIC_COMPANY_CITY ?? 'Hinwil',
+  country: process.env.NEXT_PUBLIC_COMPANY_COUNTRY ?? 'CH',
+  phone: process.env.NEXT_PUBLIC_COMPANY_PHONE ?? '+41 44 500 20 20',
+  email: process.env.NEXT_PUBLIC_COMPANY_EMAIL ?? 'info@santecgroup.ch',
+} as const;
+
+/** Sekrety – tylko po stronie serwera. */
+export const serverEnv = {
+  mailApiKey: process.env.MAIL_PROVIDER_API_KEY ?? '',
+  mailFrom: process.env.MAIL_FROM ?? '',
+  mailTo: process.env.MAIL_TO ?? '',
+} as const;
