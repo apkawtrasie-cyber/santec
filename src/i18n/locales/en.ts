@@ -26,8 +26,14 @@ const en: Dictionary = {
   gebaeudetechnik: {
     eyebrow: 'Building Technology',
     title: 'Technology for\nthe future.',
-    text: 'We plan and deliver modern building technology focused on energy efficiency, sustainability and innovation.',
-    items: ['Heating', 'Ventilation', 'Sanitary', 'Energy solutions'],
+    text: 'As independent experts and HVAC engineers we plan, optimise and monitor your systems – fault-free, energy-efficient and at minimal operating costs.',
+    items: [
+      { title: 'Refrigeration Systems', desc: 'Ventilation, climate and refrigeration systems for residential, commercial and industrial buildings.' },
+      { title: 'Sanitary Systems', desc: 'Planning and calculation of hygienic drinking-water installations and drainage systems.' },
+      { title: 'Electrical & Building Installations', desc: 'Modern electrical infrastructure including Smart Home, building automation and safety lighting.' },
+      { title: 'Photovoltaics & Energy Systems', desc: 'High-efficiency PV systems, battery storage solutions and e-mobility (wallboxes).' },
+    ],
+    infoBtn: 'More info',
     cta: 'Learn more',
   },
   ueberUns: {

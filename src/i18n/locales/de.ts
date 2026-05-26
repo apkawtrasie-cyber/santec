@@ -26,8 +26,14 @@ const de: Dictionary = {
   gebaeudetechnik: {
     eyebrow: 'Gebäudetechnik',
     title: 'Technik für\ndie Zukunft.',
-    text: 'Wir planen und realisieren moderne Gebäudetechnik mit Fokus auf Energieeffizienz, Nachhaltigkeit und Innovation.',
-    items: ['Heizung', 'Lüftung', 'Sanitär', 'Energielösungen'],
+    text: 'Als unabhängige Experten und HLKS-Ingenieure planen, optimieren und kontrollieren wir Ihre Anlagen – störungsfrei, energieeffizient und mit minimalen Betriebskosten.',
+    items: [
+      { title: 'Kälteanlagen', desc: 'Lüftungs-, Klima- und Kältesysteme für Wohn-, Gewerbe- und Industriebauten inkl. Luftmengenmessung und Hygienekontrollen.' },
+      { title: 'Sanitärtechnische Systeme', desc: 'Planung und Berechnung hygienisch einwandfreier Trinkwasserinstallationen und Abwassersysteme.' },
+      { title: 'Elektro- & Gebäudeinstallationen', desc: 'Moderne Elektroinfrastrukturen inkl. Smart-Home, Gebäudeautomation und Sicherheitsbeleuchtung.' },
+      { title: 'Photovoltaik- & Energiesysteme', desc: 'Hocheffiziente PV-Anlagen, Stromspeichersysteme und E-Mobilitätslösungen (Wallboxen).' },
+    ],
+    infoBtn: 'Mehr Info',
     cta: 'Mehr erfahren',
   },
   ueberUns: {

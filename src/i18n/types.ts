@@ -24,7 +24,8 @@ export interface Dictionary {
     eyebrow: string;
     title: string;
     text: string;
-    items: string[];
+    items: { title: string; desc: string }[];
+    infoBtn: string;
     cta: string;
   };
   ueberUns: {

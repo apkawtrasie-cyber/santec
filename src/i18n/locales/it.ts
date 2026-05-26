@@ -26,8 +26,14 @@ const it: Dictionary = {
   gebaeudetechnik: {
     eyebrow: 'Tecnica edile',
     title: 'Tecnologia per\nil futuro.',
-    text: 'Progettiamo e realizziamo tecnica edile moderna con focus su efficienza energetica, sostenibilità e innovazione.',
-    items: ['Riscaldamento', 'Ventilazione', 'Sanitari', 'Soluzioni energetiche'],
+    text: 'Come esperti indipendenti e ingegneri HVAC pianifichiamo, ottimizziamo e controlliamo i vostri impianti – senza guasti, efficienti e a costi operativi minimi.',
+    items: [
+      { title: 'Impianti frigoriferi', desc: 'Ventilazione, climatizzazione e refrigerazione per edifici residenziali, commerciali e industriali.' },
+      { title: 'Sistemi sanitari', desc: 'Pianificazione e calcolo di impianti idrico-sanitari igienici e sistemi di scarico.' },
+      { title: 'Impianti elettrici', desc: 'Infrastrutture elettriche moderne con domotica, automazione e illuminazione di sicurezza.' },
+      { title: 'Fotovoltaico & energia', desc: 'Impianti FV ad alta efficienza, sistemi di accumulo e mobilità elettrica (wallbox).' },
+    ],
+    infoBtn: 'Maggiori info',
     cta: 'Scopri di più',
   },
   ueberUns: {

@@ -26,8 +26,14 @@ const fr: Dictionary = {
   gebaeudetechnik: {
     eyebrow: 'Technique du bâtiment',
     title: 'La technique\nde demain.',
-    text: 'Nous concevons et réalisons une technique du bâtiment moderne axée sur l’efficacité énergétique, la durabilité et l’innovation.',
-    items: ['Chauffage', 'Ventilation', 'Sanitaire', 'Solutions énergétiques'],
+    text: 'En tant qu’experts indépendants et ingénieurs CVC, nous planifions, optimisons et contrôlons vos installations – sans pannes, efficaces et à moindres coûts d’exploitation.',
+    items: [
+      { title: 'Systèmes frigorifiques', desc: 'Ventilation, climatisation et réfrigération pour bâtiments résidentiels, commerciaux et industriels.' },
+      { title: 'Systèmes sanitaires', desc: 'Planification et calcul d’installations d’eau potable et d’évacuation.' },
+      { title: 'Installations électriques', desc: 'Infrastructures électriques modernes, domotique et éclairage de sécurité.' },
+      { title: 'Photovoltaïque & énergie', desc: 'Installations PV haute performance, stockage d’énergie et mobilité électrique.' },
+    ],
+    infoBtn: 'En savoir plus',
     cta: 'En savoir plus',
   },
   ueberUns: {
