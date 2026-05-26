@@ -59,11 +59,11 @@ export function Gebaeudetechnik() {
           </ul>
 
           <div className="mt-8">
-            <a href="#kontakt">
+            <Link href="/gebaeudetechnik">
               <Button variant="ghost" size="lg" className="w-full sm:w-auto">
                 {t.gebaeudetechnik.cta}
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
