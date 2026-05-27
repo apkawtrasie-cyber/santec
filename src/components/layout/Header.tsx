@@ -24,6 +24,7 @@ export function Header() {
   const subLinks = [
     { href: '/sanierung', label: 'Asbest- & Schadstoffsanierung' },
     { href: '/gebaeudetechnik', label: 'Gebäudetechnik – Übersicht' },
+    { href: '/#faq', label: 'FAQ' },
   ];
 
   return (
@@ -48,7 +49,7 @@ export function Header() {
 
           <div className="hidden items-center gap-4 lg:flex">
             <LanguageSwitcher />
-            <a href={`tel:+417978773477`}>
+            <a href={`tel:${company.phone.replace(/\s+/g, '')}`}>
               <Button variant="ghost" size="md" withArrow={false}>
                 {t.nav.anfrage}
               </Button>
@@ -114,7 +115,7 @@ export function Header() {
             <Phone className="h-4 w-4" />
             {company.phone}
           </a>
-          <a href="tel:+417978773477" className="w-full max-w-xs">
+          <a href={`tel:${company.phone.replace(/\s+/g, '')}`} className="w-full max-w-xs">
             <Button variant="ghost" size="lg" withArrow={false} className="w-full">
               {t.nav.anfrage}
             </Button>

@@ -53,6 +53,10 @@ export function Footer() {
               <a href={`tel:${company.phone.replace(/\s+/g, '')}`}>{company.phone}</a>
             </div>
             <div className="flex items-center gap-2">
+              <Phone className="h-3.5 w-3.5 text-brand-green" />
+              <a href={`tel:${company.phoneSecondary.replace(/\s+/g, '')}`}>{company.phoneSecondary}</a>
+            </div>
+            <div className="flex items-center gap-2">
               <Mail className="h-3.5 w-3.5 text-brand-green" />
               <a href={`mailto:${company.email}`}>{company.email}</a>
             </div>

@@ -64,6 +64,10 @@ export function Kontakt() {
               <a href={`tel:${company.phone.replace(/\s+/g, '')}`}>{company.phone}</a>
             </li>
             <li className="flex items-center gap-3">
+              <Phone className="h-4 w-4 text-brand-green" />
+              <a href={`tel:${company.phoneSecondary.replace(/\s+/g, '')}`}>{company.phoneSecondary}</a>
+            </li>
+            <li className="flex items-center gap-3">
               <Mail className="h-4 w-4 text-brand-green" />
               <a href={`mailto:${company.email}`}>{company.email}</a>
             </li>

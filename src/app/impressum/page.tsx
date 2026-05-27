@@ -46,6 +46,15 @@ export default function ImpressumPage() {
               </a>
             </li>
             <li>
+              <span className="text-white/50">Telefon 2:</span>{' '}
+              <a
+                href={`tel:${company.phoneSecondary.replace(/\s+/g, '')}`}
+                className="hover:text-white transition"
+              >
+                {company.phoneSecondary}
+              </a>
+            </li>
+            <li>
               <span className="text-white/50">E-Mail:</span>{' '}
               <a
                 href={`mailto:${company.email}`}

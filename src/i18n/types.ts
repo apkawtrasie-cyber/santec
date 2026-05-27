@@ -74,4 +74,13 @@ export interface Dictionary {
       duration: string;
     };
   };
+  faq: {
+    eyebrow: string;
+    title: string;
+    text: string;
+    groups: {
+      title: string;
+      items: { q: string; a: string }[];
+    }[];
+  };
 }

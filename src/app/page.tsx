@@ -5,6 +5,7 @@ import { Sanierung } from '@/components/sections/Sanierung';
 import { Gebaeudetechnik } from '@/components/sections/Gebaeudetechnik';
 import { UeberUns } from '@/components/sections/UeberUns';
 import { Prozess } from '@/components/sections/Prozess';
+import { Faq } from '@/components/sections/Faq';
 import { Kontakt } from '@/components/sections/Kontakt';
 
 export default function HomePage() {
@@ -17,6 +18,7 @@ export default function HomePage() {
         <Gebaeudetechnik />
         <UeberUns />
         <Prozess />
+        <Faq />
         <Kontakt />
       </main>
       <Footer />

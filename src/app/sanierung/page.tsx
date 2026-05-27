@@ -264,10 +264,17 @@ export default function SanierungOverviewPage() {
                   </p>
                   <a
                     href={`tel:${company.phone.replace(/\s+/g, '')}`}
-                    className="mb-3 flex items-center gap-2 text-sm font-semibold text-white transition hover:text-white/80"
+                    className="mb-2 flex items-center gap-2 text-sm font-semibold text-white transition hover:text-white/80"
                   >
                     <Phone className="h-4 w-4 text-brand-red" />
                     {company.phone}
+                  </a>
+                  <a
+                    href={`tel:${company.phoneSecondary.replace(/\s+/g, '')}`}
+                    className="mb-3 flex items-center gap-2 text-sm font-semibold text-white transition hover:text-white/80"
+                  >
+                    <Phone className="h-4 w-4 text-brand-red" />
+                    {company.phoneSecondary}
                   </a>
                   <a
                     href={`mailto:${company.email}`}

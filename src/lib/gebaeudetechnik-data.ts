@@ -44,6 +44,22 @@ export const GT_CATEGORIES: GtCategory[] = [
         heading: 'Unabhängige Gutachten und Expertisen',
         text: 'Als zertifizierte, neutrale Gutachter erstellen wir fundierte und rechtssichere technische Expertisen. Präzise Ursachenanalyse bei Systemausfällen, Fehlfunktionen oder mangelhafter Leistung von Lüftungs- und Kälteanlagen.',
       },
+      {
+        heading: 'Lüftungsreinigung – Industrie und Gewerbe',
+        text: 'Lüftungsanlagen in Industrie- und Gewerbebetrieben laufen oft im Dauerbetrieb und sind extremen Belastungen ausgesetzt. Eine regelmässige, fachgerechte Reinigung sichert den reibungslosen Ablauf Ihrer Produktion, schützt Ihre Maschinen vor Überhitzung und sorgt für ein gesundes Arbeitsklima.',
+      },
+      {
+        heading: 'Lüftungsreinigung – Büros, Wohnungen und Schulen',
+        text: 'Wo viele Menschen zusammenkommen, ist erstklassige Luftqualität entscheidend. Saubere Lüftungskanäle garantieren eine konstante Frischluftzufuhr, steigern die Konzentration am Arbeitsplatz oder im Unterricht und reduzieren das Risiko von Atemwegserkrankungen spürbar.',
+      },
+      {
+        heading: 'Lüftungsreinigung – Gesundheitswesen und Pflege',
+        text: 'In Spitälern, Arztpraxen und Pflegeheimen hat Hygiene oberste Priorität. Verschmutzte Klimaanlagen und Lüftungen können Keime und Allergene verteilen. Durch unsere zertifizierte Reinigung minimieren Sie gesundheitliche Risiken für Patienten und Personal und sichern höchste Hygienestandards.',
+      },
+      {
+        heading: 'Lüftungsreinigung – Gastronomie',
+        text: 'Fettablagerungen in den Abluftanlagen von Grossküchen sind brandgefährlich und ein grosses Hygienerisiko. Unsere professionelle Reinigung beseitigt hartnäckige Rückstände komplett. Das sorgt für maximale Betriebssicherheit, senkt das Brandrisiko und erfüllt alle gesetzlichen Auflagen.',
+      },
     ],
   },
   {
@@ -148,6 +164,45 @@ export const GT_CATEGORIES: GtCategory[] = [
       {
         heading: 'Unabhängige Gutachten und Expertisen',
         text: 'Als zertifizierte, neutrale Gutachter erstellen wir fundierte technische Expertisen für Eigentümer, Liegenschaftsverwaltungen und Versicherungen. Inklusive Abnahme und Garantieprüfung nach SIA-Normen.',
+      },
+    ],
+  },
+  {
+    slug: 'service',
+    title: 'Service & Wartung',
+    tagline: 'Zuverlässig. Planbar. Vorausschauend.',
+    imageUrl:
+      'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1600&q=80',
+    intro:
+      'Regelmässige Wartung, Reinigung und Service rund um Klima, Lüftung, Heizung und Sanitär. Unser Service-Team sorgt dafür, dass Ihre Anlagen einwandfrei, energieeffizient und mit minimalen Betriebskosten laufen – vom geplanten Wartungsvertrag bis zur kurzfristigen Störungsbehebung.',
+    features: [
+      'Wartungsverträge & Service-Pakete',
+      'Lüftungsreinigung & Hygieneprüfung',
+      'Klimaanlagen-Service & Filterwechsel',
+      'Heizungsservice & hydraulischer Abgleich',
+      'Sanitär-Service & Legionellenprüfung',
+      '24/7-Bereitschaft bei Störungen',
+    ],
+    sections: [
+      {
+        heading: 'Unser Ansatz',
+        text: 'Anlagen, die regelmässig gewartet werden, halten länger, verbrauchen weniger Energie und fallen seltener aus. Wir bieten massgeschneiderte Service-Pakete – vom Privathaushalt bis zum Industriebetrieb. Transparente Preise, klare Leistungen, dokumentierte Kontrollen.',
+      },
+      {
+        heading: 'Wartungsverträge nach Mass',
+        text: 'Wir erstellen für Sie ein individuelles Wartungsprogramm basierend auf Anlagentyp, Nutzung und gesetzlichen Vorgaben. Sie erhalten regelmässige Kontrollen, dokumentierte Berichte und priorisierten Service bei Störungen.',
+      },
+      {
+        heading: 'Lüftungs- & Klimaanlagen-Service',
+        text: 'Filterwechsel, Hygienekontrollen nach SIA, Reinigung der Kanäle und Wärmetauscher. Wir prüfen Luftmengen, justieren Regelungen und sorgen dafür, dass Ihre Anlage hygienisch einwandfrei und energieeffizient arbeitet.',
+      },
+      {
+        heading: 'Heizungs- & Sanitärservice',
+        text: 'Jährlicher Heizungsservice, hydraulischer Abgleich, Kontrolle von Wärmepumpen und Pelletsanlagen. Im Sanitärbereich übernehmen wir Legionellenprüfung, Spülungen, Reparaturen und Modernisierungen Ihrer Anlage.',
+      },
+      {
+        heading: 'Störungsdienst & 24/7-Bereitschaft',
+        text: 'Heizungsausfall, Wasserleck oder defekte Lüftung? Unser Service-Team ist auch ausserhalb der Geschäftszeiten erreichbar und garantiert schnelle Reaktion – wir minimieren Ausfallzeiten und sichern den Betrieb Ihres Gebäudes.',
       },
     ],
   },

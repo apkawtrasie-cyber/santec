@@ -2,12 +2,12 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Wind, Flame, Sun, Droplets, ChevronRight } from 'lucide-react';
+import { Wind, Flame, Sun, Droplets, Wrench, ChevronRight } from 'lucide-react';
 import { useI18n } from '@/i18n/I18nProvider';
 import { Button } from '@/components/ui/Button';
 
-const ICONS = [Wind, Flame, Sun, Droplets];
-const SLUGS = ['lueftung-klima', 'heizung', 'solar', 'sanitaer'];
+const ICONS = [Wind, Flame, Sun, Droplets, Wrench];
+const SLUGS = ['lueftung-klima', 'heizung', 'solar', 'sanitaer', 'service'];
 
 export function Gebaeudetechnik() {
   const { t } = useI18n();
