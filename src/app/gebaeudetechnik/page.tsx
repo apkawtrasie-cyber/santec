@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowLeft, CheckCircle2, Phone, Mail, ArrowRight } from 'lucide-react';
 import { GT_CATEGORIES } from '@/lib/gebaeudetechnik-data';
 import { company } from '@/lib/env';
@@ -54,6 +55,11 @@ export default function GebaeudetechnikOverviewPage() {
           </Link>
           <span className="text-xs text-white/30">/</span>
           <span className="truncate text-sm text-white/80">Gebäudetechnik</span>
+          <div className="ml-auto">
+            <Link href="/">
+              <Image src="/logo.santec.png" alt="Santec Group" width={120} height={36} className="h-9 w-auto" />
+            </Link>
+          </div>
         </div>
       </header>
 

@@ -24,8 +24,8 @@ export function Hero() {
 
       <div className="relative flex min-h-screen flex-col px-5 py-16 md:px-8 lg:min-h-0 lg:block lg:py-28">
         <div className="mx-auto w-full max-w-7xl">
-          <div className="max-w-lg">
-            <h1 className="whitespace-pre-line text-[2.25rem] font-bold leading-[1.05] tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
+          <div className="max-w-2xl">
+            <h1 className="whitespace-pre-line text-[1.875rem] font-bold leading-[1.1] tracking-tight text-white sm:text-4xl md:text-5xl">
               {t.hero.title}
             </h1>
             <p className="mt-5 max-w-md text-sm leading-relaxed text-white/70 sm:text-base">

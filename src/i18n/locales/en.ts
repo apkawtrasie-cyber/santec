@@ -10,7 +10,7 @@ const en: Dictionary = {
     anfrage: 'Enquiry',
   },
   hero: {
-    title: 'Two competencies.\nOne quality standard.',
+    title: 'Building Technology &\nRenovation Switzerland',
     subtitle:
       'Santec Group stands for professional renovation and forward-looking building technology. Safe. Clean. Sustainable.',
     ctaSanierung: 'Asbestos Remediation',

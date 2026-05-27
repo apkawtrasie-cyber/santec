@@ -10,7 +10,7 @@ const fr: Dictionary = {
     anfrage: 'Demande',
   },
   hero: {
-    title: 'Deux compétences.\nUne exigence de qualité.',
+    title: 'Technique du bâtiment\nAssainissement Suisse',
     subtitle:
       'Santec Group, c’est l’assainissement professionnel et la technique du bâtiment tournée vers l’avenir. Sûr. Propre. Durable.',
     ctaSanierung: 'Désamiantage',

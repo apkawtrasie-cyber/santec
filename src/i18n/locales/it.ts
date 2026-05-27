@@ -10,7 +10,7 @@ const it: Dictionary = {
     anfrage: 'Richiesta',
   },
   hero: {
-    title: 'Due competenze.\nUn’unica esigenza di qualità.',
+    title: 'Tecnica edile &\nRisanamento Svizzera',
     subtitle:
       'Santec Group significa risanamento professionale e tecnica edile orientata al futuro. Sicuro. Pulito. Sostenibile.',
     ctaSanierung: 'Bonifica Amianto',

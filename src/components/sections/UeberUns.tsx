@@ -7,7 +7,7 @@ export function UeberUns() {
   return (
     <section id="ueber-uns" className="bg-bg py-14 sm:py-16 lg:py-24">
       <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-10 px-5 md:px-8 lg:grid-cols-2 lg:items-start">
-        <div>
+        <div className="pl-4 lg:pl-8">
           <span className="inline-flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/60 sm:text-xs">
             <span className="h-px w-8 bg-white/40" /> {t.ueberUns.eyebrow}
           </span>

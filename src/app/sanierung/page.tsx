@@ -132,6 +132,11 @@ export default function SanierungOverviewPage() {
           </Link>
           <span className="text-xs text-white/30">/</span>
           <span className="truncate text-sm text-white/80">Asbest- & Schadstoffsanierung</span>
+          <div className="ml-auto">
+            <Link href="/">
+              <Image src="/logo.santec.png" alt="Santec Group" width={120} height={36} className="h-9 w-auto" />
+            </Link>
+          </div>
         </div>
       </header>
 
