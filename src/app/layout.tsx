@@ -57,9 +57,9 @@ export default function RootLayout({
         <I18nProvider>
           {children}
           <CookieBanner />
+          <WhatsAppChat />
         </I18nProvider>
         <JsonLd data={buildLocalBusinessJsonLd()} />
-        <WhatsAppChat />
       </body>
     </html>
   );
