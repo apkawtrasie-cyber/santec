@@ -100,7 +100,7 @@ export default function DatenschutzPage() {
             Unsere Website verwendet teilweise so genannte Cookies. Cookies richten auf Ihrem
             Rechner keinen Schaden an und enthalten keine Viren. Cookies dienen dazu, unser Angebot
             nutzerfreundlicher, effektiver und sicherer zu machen. Die meisten der von uns
-            verwendeten Cookies sind sogenannte „Session-Cookies". Sie werden nach Ende Ihres
+            verwendeten Cookies sind sogenannte &bdquo;Session-Cookies&ldquo;. Sie werden nach Ende Ihres
             Besuchs automatisch gelöscht.
           </p>
         </section>
