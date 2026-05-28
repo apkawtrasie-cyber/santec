@@ -4,6 +4,7 @@ import { I18nProvider } from '@/i18n/I18nProvider';
 import { CookieBanner } from '@/components/ui/CookieBanner';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { buildLocalBusinessJsonLd, robotsMeta } from '@/lib/seo';
+import { WhatsAppChat } from '@/components/WhatsAppChat';
 import { env } from '@/lib/env';
 import { DEFAULT_LOCALE } from '@/i18n/config';
 import './globals.css';
@@ -58,6 +59,7 @@ export default function RootLayout({
           <CookieBanner />
         </I18nProvider>
         <JsonLd data={buildLocalBusinessJsonLd()} />
+        <WhatsAppChat />
       </body>
     </html>
   );
