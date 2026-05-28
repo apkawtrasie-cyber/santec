@@ -160,6 +160,13 @@ const en: Dictionary = {
       duration: 'Duration',
     },
   },
+  whatsapp: {
+    header: 'Customer Service',
+    subheader: 'We usually reply within a few minutes',
+    greeting: 'Hello! 👋 How can I help you? Send us a message and we\'ll get back to you as soon as possible.',
+    placeholder: 'Write a message…',
+    startChat: 'Start chat',
+  },
 };
 
 export default en;

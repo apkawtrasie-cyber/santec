@@ -83,4 +83,11 @@ export interface Dictionary {
       items: { q: string; a: string }[];
     }[];
   };
+  whatsapp: {
+    header: string;
+    subheader: string;
+    greeting: string;
+    placeholder: string;
+    startChat: string;
+  };
 }

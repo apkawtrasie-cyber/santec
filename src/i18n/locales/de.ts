@@ -160,6 +160,13 @@ const de: Dictionary = {
       },
     ],
   },
+  whatsapp: {
+    header: 'Kundenservice',
+    subheader: 'Wir antworten normalerweise innerhalb weniger Minuten',
+    greeting: 'Hallo! 👋 Wie kann ich Ihnen helfen? Schreiben Sie uns eine Nachricht und wir melden uns so schnell wie möglich.',
+    placeholder: 'Nachricht schreiben…',
+    startChat: 'Chat starten',
+  },
 };
 
 export default de;

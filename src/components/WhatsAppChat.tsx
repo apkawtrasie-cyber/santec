@@ -2,10 +2,12 @@
 
 import { useState, useCallback } from 'react';
 import { X, Send } from 'lucide-react';
+import { useI18n } from '@/i18n/I18nProvider';
 
 const PHONE_NUMBER = '41797873477';
 
 export function WhatsAppChat() {
+  const { t } = useI18n();
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState('');
 
@@ -42,14 +44,14 @@ export function WhatsAppChat() {
               <span className="absolute bottom-0 right-0 h-3 w-3 rounded-full border-2 border-[#075E54] bg-[#25D366]" />
             </div>
             <div>
-              <p className="text-sm font-semibold text-white">Obsługa Klienta</p>
-              <p className="text-xs text-white/70">Zazwyczaj odpowiadamy w kilka minut</p>
+              <p className="text-sm font-semibold text-white">{t.whatsapp.header}</p>
+              <p className="text-xs text-white/70">{t.whatsapp.subheader}</p>
             </div>
           </div>
           <button
             onClick={() => setIsOpen(false)}
             className="rounded-full p-1 text-white/70 transition hover:bg-white/10 hover:text-white"
-            aria-label="Zamknij czat"
+            aria-label="Close"
           >
             <X className="h-4 w-4" />
           </button>
@@ -60,7 +62,7 @@ export function WhatsAppChat() {
           {/* Bubble hint */}
           <div className="mb-3 max-w-[85%] rounded-xl rounded-tl-none bg-white px-3 py-2 shadow-sm">
             <p className="text-sm text-gray-700">
-              Cześć! 👋 W czym mogę pomóc? Napisz wiadomość, a odpiszemy najszybciej jak to możliwe.
+              {t.whatsapp.greeting}
             </p>
             <p className="mt-1 text-right text-[10px] text-gray-400">Santec Group</p>
           </div>
@@ -70,7 +72,7 @@ export function WhatsAppChat() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Napisz wiadomość…"
+            placeholder={t.whatsapp.placeholder}
             rows={3}
             className="w-full resize-none rounded-xl border-0 bg-white px-3 py-2.5 text-sm text-gray-800 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#25D366]"
           />
@@ -82,7 +84,7 @@ export function WhatsAppChat() {
             style={{ backgroundColor: '#25D366' }}
           >
             <WhatsAppIcon className="h-4 w-4" />
-            Rozpocznij czat
+            {t.whatsapp.startChat}
             <Send className="h-3.5 w-3.5" />
           </button>
         </div>
@@ -99,7 +101,7 @@ export function WhatsAppChat() {
         )}
         <button
           onClick={() => setIsOpen((v) => !v)}
-          aria-label={isOpen ? 'Zamknij WhatsApp' : 'Otwórz WhatsApp'}
+          aria-label="WhatsApp"
           className="relative flex h-14 w-14 items-center justify-center rounded-full shadow-lg transition-transform hover:scale-105 active:scale-95"
           style={{ backgroundColor: '#25D366' }}
         >
