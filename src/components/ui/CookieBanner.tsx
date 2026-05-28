@@ -37,7 +37,7 @@ export function CookieBanner() {
             {t.cookies.description}
           </p>
           <div className="mt-2 flex gap-4 text-xs text-white/50">
-            <a href="#" className="hover:text-white transition">{t.footer.datenschutz}</a>
+            <a href="/datenschutz" className="hover:text-white transition">{t.footer.datenschutz}</a>
             <a href="/impressum" className="hover:text-white transition">{t.footer.impressum}</a>
           </div>
         </div>

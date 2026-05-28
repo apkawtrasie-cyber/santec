@@ -69,7 +69,7 @@ export function Footer() {
           <span>© {year} {company.name} – {t.footer.rights}</span>
           <div className="flex gap-6">
             <a href="/impressum" className="hover:text-white">{t.footer.impressum}</a>
-            <a href="#" className="hover:text-white">{t.footer.datenschutz}</a>
+            <a href="/datenschutz" className="hover:text-white">{t.footer.datenschutz}</a>
           </div>
         </div>
       </div>
