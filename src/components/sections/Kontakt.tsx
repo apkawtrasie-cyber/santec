@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { useI18n } from '@/i18n/I18nProvider';
@@ -16,6 +16,7 @@ export function Kontakt() {
   const [status, setStatus] = useState<Status>('idle');
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
   const [captchaKey, setCaptchaKey] = useState(0);
+  const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
     if (status === 'success' || status === 'error') {
@@ -52,7 +53,7 @@ export function Kontakt() {
       console.error('[contact] submit error:', err);
       setStatus('error');
     } finally {
-      e.currentTarget.reset();
+      formRef.current?.reset();
       setCaptchaKey((k) => k + 1);
       setRecaptchaToken(null);
     }
@@ -98,7 +99,7 @@ export function Kontakt() {
           </ul>
         </div>
 
-        <form onSubmit={onSubmit} className="space-y-4">
+        <form ref={formRef} onSubmit={onSubmit} className="space-y-4">
           <Field name="name" label={t.kontakt.form.name} required />
           <Field name="email" label={t.kontakt.form.email} type="email" required />
           <Field name="message" label={t.kontakt.form.message} required textarea />
