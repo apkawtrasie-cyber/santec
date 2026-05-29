@@ -111,10 +111,14 @@ export async function POST(request: Request) {
     });
 
     const adminBody = await adminRes.text().catch(() => '');
+    let adminData: { id?: string; message?: string } = {};
+    try { adminData = JSON.parse(adminBody); } catch { /* ignore */ }
+
     // eslint-disable-next-line no-console
     console.log('[contact] resend status:', adminRes.status, 'body:', adminBody);
 
-    if (!adminRes.ok) {
+    // Resend zwraca {id: "..."} gdy mail został zaakceptowany – nawet przy dziwnych statusach HTTP
+    if (!adminData.id) {
       // eslint-disable-next-line no-console
       console.error('[contact] resend admin failed:', adminRes.status, adminBody);
       return NextResponse.json({ ok: false, error: 'mail_failed', detail: adminBody.slice(0, 200) }, { status: 502 });
