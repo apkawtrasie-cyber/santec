@@ -33,6 +33,7 @@ const fr: Dictionary = {
       { title: 'Solaire & Photovoltaïque', desc: 'Systèmes PV haute performance, stockage d’énergie et solutions de mobilité électrique.' },
       { title: 'Sanitaire', desc: 'Installations d’eau potable hygiéniques, systèmes d’évacuation et contrôle légionelles.' },
       { title: 'Service', desc: 'Entretien, nettoyage et service pour climatisation, ventilation, chauffage et sanitaire – fiable et planifié.' },
+      { title: 'Démantèlement & Démolition', desc: 'Démantèlement technique et démolition industrielle – de la planification à la remise des clés.' },
     ],
     infoBtn: 'En savoir plus',
     cta: 'En savoir plus',

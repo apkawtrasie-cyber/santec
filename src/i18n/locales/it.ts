@@ -33,6 +33,7 @@ const it: Dictionary = {
       { title: 'Solare & Fotovoltaico', desc: 'Impianti FV ad alta efficienza, sistemi di accumulo e mobilità elettrica (wallbox).' },
       { title: 'Sanitario', desc: 'Installazioni idrosanitarie igieniche, sistemi di scarico e controllo legionella.' },
       { title: 'Service', desc: 'Manutenzione, pulizia e assistenza per climatizzazione, ventilazione, riscaldamento e sanitario – affidabile e pianificato.' },
+      { title: 'Smantellamento & Demolizione', desc: 'Smantellamento tecnico e demolizione industriale – dalla pianificazione alla consegna chiavi in mano.' },
     ],
     infoBtn: 'Maggiori info',
     cta: 'Scopri di più',

@@ -206,6 +206,53 @@ export const GT_CATEGORIES: GtCategory[] = [
       },
     ],
   },
+  {
+    slug: 'rueckbau',
+    title: 'Technischer Rückbau & Industriedemontage',
+    tagline: 'Rückbau. Demontage. Schlüsselübergabe.',
+    imageUrl:
+      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80',
+    intro:
+      'Wir sind Ihr fachlicher Partner für den professionellen Rückbau und die Demontage von Maschinen, Industrieanlagen sowie kompletten Produktionshallen. Ob Betriebsverlagerung, Modernisierung oder finale Stilllegung – wir übernehmen das gesamte Projekt von der Planung bis zur Schlüsselübergabe.',
+    features: [
+      'Sorgfältige Rückbauplanung',
+      'Risikoanalyse & Sicherheitskonzepte',
+      'Fachgerechte Demontage',
+      'Rückbau im laufenden Betrieb',
+      'Schadstoffsanierung & Entsorgung',
+      'Schwertransporte',
+    ],
+    sections: [
+      {
+        heading: 'Sorgfältige Rückbauplanung',
+        text: 'Präzise Bestandsaufnahme, Zeiteinteilung und Koordination aller Schritte. Wir analysieren Ihr Objekt im Detail und erstellen einen verbindlichen Ablaufplan – damit jeder Schritt sitzt und Verzögerungen vermieden werden.',
+      },
+      {
+        heading: 'Risikoanalyse & Sicherheit',
+        text: 'Erstellung zertifizierter Sicherheits- und Brandschutzkonzepte für einen unfallfreien Ablauf. Wir identifizieren Gefahrenquellen frühzeitig und sorgen für die Einhaltung aller geltenden Schweizer Normen und SUVA-Vorschriften.',
+      },
+      {
+        heading: 'Fachgerechte Demontage',
+        text: 'Erfahrenes Personal demontiert, kennzeichnet und bereitet Ihre Anlagen für den Abtransport vor. Jedes Bauteil wird systematisch dokumentiert – ideal bei Betriebsverlagerungen, Wiederaufbau oder Verkauf einzelner Komponenten.',
+      },
+      {
+        heading: 'Rückbau im laufenden Betrieb',
+        text: 'Minimierung von Stillstandzeiten – wir arbeiten auf Wunsch parallel zu Ihrer laufenden Produktion. Durch sorgfältige Abschottung, klare Verkehrsführung und Lärmschutzmassnahmen bleibt Ihre Wertschöpfung erhalten.',
+      },
+      {
+        heading: 'Schadstoffsanierung & Entsorgung',
+        text: 'Sicherer Umgang mit Altlasten (Asbest, PCB, KMF etc.) und umweltgerechtes Recycling mit ISO-zertifizierten Partnern. Sämtliche Materialströme werden nachvollziehbar dokumentiert – inklusive Entsorgungsnachweise.',
+      },
+      {
+        heading: 'Schwertransporte',
+        text: 'Organisation und Durchführung von anspruchsvollen Transporten schwerer und sperriger Maschinenkomponenten. Vom Schwerlastkran über Sondergenehmigungen bis hin zum Zielort übernehmen wir die gesamte Logistik.',
+      },
+      {
+        heading: 'Warum mit uns?',
+        text: 'Wir garantieren Ihnen absolute Kostentransparenz, verlässliche Zeitpläne und eine saubere Übergabe der Hallen in den Grundzustand. Effizient, sicher und nachhaltig. Möchten Sie Ihr Projekt besprechen? Kontaktieren Sie uns für ein unverbindliches Erstgespräch.',
+      },
+    ],
+  },
 ];
 
 export function getCategory(slug: string): GtCategory | undefined {

@@ -33,6 +33,7 @@ const en: Dictionary = {
       { title: 'Solar & Photovoltaics', desc: 'High-efficiency PV systems, battery storage solutions and e-mobility (wallboxes).' },
       { title: 'Sanitary', desc: 'Hygienic drinking-water installations, drainage systems and Legionella testing.' },
       { title: 'Service', desc: 'Maintenance, cleaning and service for climate, ventilation, heating and sanitary systems – reliable and predictable.' },
+      { title: 'Dismantling & Demolition', desc: 'Technical dismantling and industrial demolition – from planning to key handover.' },
     ],
     infoBtn: 'More info',
     cta: 'Learn more',

@@ -7,6 +7,7 @@ import { useI18n } from '@/i18n/I18nProvider';
 
 export function Faq() {
   const { t } = useI18n();
+  const [openGroup, setOpenGroup] = useState<string | null>(null);
   const [openId, setOpenId] = useState<string | null>(null);
 
   return (
@@ -25,50 +26,88 @@ export function Faq() {
           </p>
         </div>
 
-        <div className="mt-12 space-y-10">
-          {t.faq.groups.map((group) => (
-            <div key={group.title}>
-              <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-brand-green">
-                {group.title}
-              </h3>
-              <ul className="overflow-hidden rounded-xl border border-white/10 bg-bg">
-                {group.items.map((item, idx) => {
-                  const id = `${group.title}-${idx}`;
-                  const open = openId === id;
-                  return (
-                    <li key={id} className="border-b border-white/10 last:border-0">
-                      <button
-                        type="button"
-                        onClick={() => setOpenId(open ? null : id)}
-                        className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left transition hover:bg-white/5"
-                        aria-expanded={open}
-                      >
-                        <span className="text-sm font-semibold text-white sm:text-base">
-                          {item.q}
-                        </span>
-                        <ChevronDown
-                          className={clsx(
-                            'h-5 w-5 shrink-0 text-white/60 transition-transform',
-                            open && 'rotate-180',
-                          )}
-                        />
-                      </button>
-                      <div
-                        className={clsx(
-                          'overflow-hidden transition-[max-height] duration-300',
-                          open ? 'max-h-96' : 'max-h-0',
-                        )}
-                      >
-                        <p className="px-5 pb-5 text-sm leading-relaxed text-white/70">
-                          {item.a}
-                        </p>
-                      </div>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          ))}
+        <div className="mt-12 space-y-3">
+          {t.faq.groups.map((group) => {
+            const groupOpen = openGroup === group.title;
+            return (
+              <div
+                key={group.title}
+                className="overflow-hidden rounded-xl border border-brand-green/30 bg-brand-green-dark/20"
+              >
+                {/* Category header */}
+                <button
+                  type="button"
+                  onClick={() =>
+                    setOpenGroup(groupOpen ? null : group.title)
+                  }
+                  className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left transition hover:bg-brand-green/10"
+                  aria-expanded={groupOpen}
+                >
+                  <span className="text-sm font-bold uppercase tracking-wider text-brand-green sm:text-base">
+                    {group.title}
+                  </span>
+                  <ChevronDown
+                    className={clsx(
+                      'h-5 w-5 shrink-0 text-brand-green transition-transform',
+                      groupOpen && 'rotate-180',
+                    )}
+                  />
+                </button>
+
+                {/* Questions list */}
+                <div
+                  className={clsx(
+                    'grid transition-[grid-template-rows] duration-300',
+                    groupOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]',
+                  )}
+                >
+                  <div className="overflow-hidden">
+                    <ul className="border-t border-white/10 bg-bg">
+                      {group.items.map((item, idx) => {
+                        const id = `${group.title}-${idx}`;
+                        const open = openId === id;
+                        return (
+                          <li
+                            key={id}
+                            className="border-b border-white/10 last:border-0"
+                          >
+                            <button
+                              type="button"
+                              onClick={() => setOpenId(open ? null : id)}
+                              className="flex w-full items-center justify-between gap-4 px-5 py-3.5 text-left transition hover:bg-white/5"
+                              aria-expanded={open}
+                            >
+                              <span className="text-sm font-semibold text-white">
+                                {item.q}
+                              </span>
+                              <ChevronDown
+                                className={clsx(
+                                  'h-4 w-4 shrink-0 text-white/60 transition-transform',
+                                  open && 'rotate-180',
+                                )}
+                              />
+                            </button>
+                            <div
+                              className={clsx(
+                                'grid transition-[grid-template-rows] duration-300',
+                                open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]',
+                              )}
+                            >
+                              <div className="overflow-hidden">
+                                <p className="px-5 pb-4 text-sm leading-relaxed text-white/70">
+                                  {item.a}
+                                </p>
+                              </div>
+                            </div>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
