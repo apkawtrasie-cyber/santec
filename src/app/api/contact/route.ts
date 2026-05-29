@@ -93,7 +93,8 @@ export async function POST(request: Request) {
     `;
     const text = `Neue Kontaktanfrage – santecgroup.ch\n\nName:   ${name}\nE-Mail: ${email}\n\nNachricht:\n${message}`;
 
-    const res = await fetch('https://api.resend.com/emails', {
+    // 1. Mail do admina
+    const adminRes = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${serverEnv.mailApiKey}`,
@@ -109,11 +110,47 @@ export async function POST(request: Request) {
       }),
     });
 
-    if (!res.ok) {
-      const errText = await res.text().catch(() => '');
+    if (!adminRes.ok) {
+      const errText = await adminRes.text().catch(() => '');
       // eslint-disable-next-line no-console
-      console.error('[contact] resend failed:', res.status, errText);
+      console.error('[contact] resend admin failed:', adminRes.status, errText);
       return NextResponse.json({ ok: false, error: 'mail_failed' }, { status: 502 });
+    }
+
+    // 2. Auto-reply do nadawcy (best-effort)
+    try {
+      await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${serverEnv.mailApiKey}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          from: 'Santec Group <onboarding@resend.dev>',
+          to: [email],
+          subject: 'Vielen Dank für Ihre Anfrage – Santec Group',
+          html: `
+            <div style="font-family:Arial,sans-serif;max-width:560px;margin:0 auto;padding:24px;color:#111">
+              <h2 style="margin:0 0 16px;color:#0B0F0E">Vielen Dank für Ihre Anfrage</h2>
+              <p style="margin:0 0 16px">Hallo ${escapeHtml(name)},</p>
+              <p style="margin:0 0 16px">
+                wir haben Ihre Nachricht erhalten und werden uns so schnell wie möglich bei Ihnen melden.
+              </p>
+              <p style="margin:0 0 16px">
+                Mit freundlichen Grüßen<br/>
+                <strong>Santec Group GmbH</strong>
+              </p>
+              <hr style="border:none;border-top:1px solid #eee;margin:24px 0" />
+              <p style="font-size:12px;color:#666;margin:0">
+                Dies ist eine automatische Antwort. Bitte antworten Sie nicht auf diese E-Mail.
+              </p>
+            </div>
+          `,
+          text: `Hallo ${name},\n\nwir haben Ihre Nachricht erhalten und werden uns so schnell wie möglich bei Ihnen melden.\n\nMit freundlichen Grüßen\nSantec Group GmbH`,
+        }),
+      });
+    } catch {
+      // auto-reply nie jest krytyczne
     }
 
     return NextResponse.json({ ok: true });

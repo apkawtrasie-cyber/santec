@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { useI18n } from '@/i18n/I18nProvider';
@@ -16,6 +16,13 @@ export function Kontakt() {
   const [status, setStatus] = useState<Status>('idle');
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
   const [captchaKey, setCaptchaKey] = useState(0);
+
+  useEffect(() => {
+    if (status === 'success' || status === 'error') {
+      const timer = setTimeout(() => setStatus('idle'), 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [status]);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
