@@ -1,19 +1,23 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { useI18n } from '@/i18n/I18nProvider';
 import { Button } from '@/components/ui/Button';
-import { company } from '@/lib/env';
+import { company, env } from '@/lib/env';
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
 
 export function Kontakt() {
   const { t } = useI18n();
   const [status, setStatus] = useState<Status>('idle');
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (!recaptchaToken) return;
     setStatus('loading');
     const form = new FormData(e.currentTarget);
     try {
@@ -24,13 +28,18 @@ export function Kontakt() {
           name: form.get('name'),
           email: form.get('email'),
           message: form.get('message'),
+          recaptchaToken,
         }),
       });
       if (!res.ok) throw new Error('failed');
       setStatus('success');
       e.currentTarget.reset();
+      recaptchaRef.current?.reset();
+      setRecaptchaToken(null);
     } catch {
       setStatus('error');
+      recaptchaRef.current?.reset();
+      setRecaptchaToken(null);
     }
   }
 
@@ -78,11 +87,20 @@ export function Kontakt() {
           <Field name="name" label={t.kontakt.form.name} required />
           <Field name="email" label={t.kontakt.form.email} type="email" required />
           <Field name="message" label={t.kontakt.form.message} required textarea />
+          {env.recaptchaSiteKey && (
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              sitekey={env.recaptchaSiteKey}
+              theme="dark"
+              onChange={(token) => setRecaptchaToken(token)}
+              onExpired={() => setRecaptchaToken(null)}
+            />
+          )}
           <Button
             type="submit"
             variant="white"
             size="lg"
-            disabled={status === 'loading'}
+            disabled={status === 'loading' || (!!env.recaptchaSiteKey && !recaptchaToken)}
             className="w-full sm:w-auto"
           >
             {t.kontakt.form.send}

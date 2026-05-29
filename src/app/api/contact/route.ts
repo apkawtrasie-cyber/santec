@@ -19,17 +19,34 @@ export async function POST(request: Request) {
       name: string;
       email: string;
       message: string;
+      recaptchaToken: string;
     }>;
 
     const name = (body.name ?? '').toString().trim();
     const email = (body.email ?? '').toString().trim();
     const message = (body.message ?? '').toString().trim();
+    const recaptchaToken = (body.recaptchaToken ?? '').toString().trim();
 
     if (!name || !email || !message) {
       return NextResponse.json({ ok: false, error: 'missing_fields' }, { status: 400 });
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ ok: false, error: 'invalid_email' }, { status: 400 });
+    }
+
+    if (serverEnv.recaptchaSecretKey) {
+      if (!recaptchaToken) {
+        return NextResponse.json({ ok: false, error: 'recaptcha_missing' }, { status: 400 });
+      }
+      const verifyRes = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: `secret=${encodeURIComponent(serverEnv.recaptchaSecretKey)}&response=${encodeURIComponent(recaptchaToken)}`,
+      });
+      const verifyData = (await verifyRes.json()) as { success: boolean };
+      if (!verifyData.success) {
+        return NextResponse.json({ ok: false, error: 'recaptcha_failed' }, { status: 400 });
+      }
     }
 
     if (!serverEnv.mailApiKey) {

@@ -8,6 +8,7 @@ export const env = {
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000',
   allowIndexing:
     (process.env.NEXT_PUBLIC_ALLOW_INDEXING ?? 'false').toLowerCase() === 'true',
+  recaptchaSiteKey: process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? '',
 } as const;
 
 export const company = {
@@ -26,4 +27,5 @@ export const serverEnv = {
   mailApiKey: process.env.MAIL_PROVIDER_API_KEY ?? '',
   mailFrom: process.env.MAIL_FROM ?? '',
   mailTo: process.env.MAIL_TO ?? '',
+  recaptchaSecretKey: process.env.RECAPTCHA_SECRET_KEY ?? '',
 } as const;
