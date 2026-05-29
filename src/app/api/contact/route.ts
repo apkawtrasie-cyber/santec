@@ -103,18 +103,21 @@ export async function POST(request: Request) {
       body: JSON.stringify({
         from,
         to: [to],
-        reply_to: `${name} <${email}>`,
+        reply_to: email,
         subject,
         html,
         text,
       }),
     });
 
+    const adminBody = await adminRes.text().catch(() => '');
+    // eslint-disable-next-line no-console
+    console.log('[contact] resend status:', adminRes.status, 'body:', adminBody);
+
     if (!adminRes.ok) {
-      const errText = await adminRes.text().catch(() => '');
       // eslint-disable-next-line no-console
-      console.error('[contact] resend admin failed:', adminRes.status, errText);
-      return NextResponse.json({ ok: false, error: 'mail_failed' }, { status: 502 });
+      console.error('[contact] resend admin failed:', adminRes.status, adminBody);
+      return NextResponse.json({ ok: false, error: 'mail_failed', detail: adminBody.slice(0, 200) }, { status: 502 });
     }
 
     // 2. Auto-reply do nadawcy (best-effort)
