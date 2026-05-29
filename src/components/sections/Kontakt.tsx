@@ -17,7 +17,7 @@ export function Kontakt() {
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    if (!recaptchaToken) return;
+    if (env.recaptchaSiteKey && !recaptchaToken) return;
     setStatus('loading');
     const form = new FormData(e.currentTarget);
     try {
