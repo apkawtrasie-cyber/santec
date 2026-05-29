@@ -1,11 +1,13 @@
 'use client';
 
-import { useRef, useState } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
+import { useState } from 'react';
+import dynamic from 'next/dynamic';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { useI18n } from '@/i18n/I18nProvider';
 import { Button } from '@/components/ui/Button';
 import { company, env } from '@/lib/env';
+
+const ReCAPTCHA = dynamic(() => import('react-google-recaptcha'), { ssr: false });
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
 
@@ -13,7 +15,7 @@ export function Kontakt() {
   const { t } = useI18n();
   const [status, setStatus] = useState<Status>('idle');
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const [captchaKey, setCaptchaKey] = useState(0);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -34,11 +36,11 @@ export function Kontakt() {
       if (!res.ok) throw new Error('failed');
       setStatus('success');
       e.currentTarget.reset();
-      recaptchaRef.current?.reset();
+      setCaptchaKey((k) => k + 1);
       setRecaptchaToken(null);
     } catch {
       setStatus('error');
-      recaptchaRef.current?.reset();
+      setCaptchaKey((k) => k + 1);
       setRecaptchaToken(null);
     }
   }
@@ -89,7 +91,7 @@ export function Kontakt() {
           <Field name="message" label={t.kontakt.form.message} required textarea />
           {env.recaptchaSiteKey && (
             <ReCAPTCHA
-              ref={recaptchaRef}
+              key={captchaKey}
               sitekey={env.recaptchaSiteKey}
               theme="dark"
               onChange={(token) => setRecaptchaToken(token)}
