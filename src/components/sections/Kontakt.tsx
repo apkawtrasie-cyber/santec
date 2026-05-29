@@ -47,13 +47,12 @@ export function Kontakt() {
         throw new Error(body.detail || body.error || `HTTP ${res.status}`);
       }
       setStatus('success');
-      e.currentTarget.reset();
-      setCaptchaKey((k) => k + 1);
-      setRecaptchaToken(null);
     } catch (err) {
       // eslint-disable-next-line no-console
       console.error('[contact] submit error:', err);
       setStatus('error');
+    } finally {
+      e.currentTarget.reset();
       setCaptchaKey((k) => k + 1);
       setRecaptchaToken(null);
     }
