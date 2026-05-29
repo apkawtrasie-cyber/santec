@@ -33,7 +33,7 @@ const de: Dictionary = {
       { title: 'Solar & Photovoltaik', desc: 'Hocheffiziente PV-Anlagen, Batteriespeicher und E-Mobilitätslösungen (Wallboxen).' },
       { title: 'Sanitär', desc: 'Planung hygienisch einwandfreier Trinkwasserinstallationen, Abwassersysteme und Legionellenprüfung.' },
       { title: 'Service', desc: 'Wartung, Reinigung und Service rund um Klima, Lüftung, Heizung und Sanitär – zuverlässig und planbar.' },
-      { title: 'Rückbau Gebäudetechnik', desc: 'Technischer Rückbau und Industriedemontage – von der Planung bis zur Schlüsselübergabe.' },
+      { title: 'Rückbau Gebäudetechnische Anlagen', desc: 'Technischer Rückbau und Industriedemontage – von der Planung bis zur Schlüsselübergabe.' },
     ],
     infoBtn: 'Mehr Info',
     cta: 'Mehr erfahren',
