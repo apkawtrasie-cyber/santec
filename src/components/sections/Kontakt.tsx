@@ -40,12 +40,19 @@ export function Kontakt() {
           recaptchaToken,
         }),
       });
-      if (!res.ok) throw new Error('failed');
+      const body = await res.json().catch(() => ({ ok: false }));
+      // eslint-disable-next-line no-console
+      console.log('[contact] response:', res.status, body);
+      if (!res.ok || !body.ok) {
+        throw new Error(body.detail || body.error || `HTTP ${res.status}`);
+      }
       setStatus('success');
       e.currentTarget.reset();
       setCaptchaKey((k) => k + 1);
       setRecaptchaToken(null);
-    } catch {
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.error('[contact] submit error:', err);
       setStatus('error');
       setCaptchaKey((k) => k + 1);
       setRecaptchaToken(null);
