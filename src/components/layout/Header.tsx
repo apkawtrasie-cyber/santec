@@ -14,17 +14,11 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   const links = [
-    { href: '#home', label: t.nav.home },
-    { href: '#sanierung', label: t.nav.sanierung },
-    { href: '#gebaeudetechnik', label: t.nav.gebaeudetechnik },
-    { href: '#ueber-uns', label: t.nav.ueberUns },
-    { href: '#kontakt', label: t.nav.kontakt },
-  ];
-
-  const subLinks = [
-    { href: '/sanierung', label: 'Asbest- & Schadstoffsanierung' },
-    { href: '/gebaeudetechnik', label: 'Gebäudetechnik – Übersicht' },
-    { href: '/#faq', label: 'FAQ' },
+    { href: '/#home', label: t.nav.home },
+    { href: '/#sanierung', label: t.nav.sanierung },
+    { href: '/#gebaeudetechnik', label: t.nav.gebaeudetechnik },
+    { href: '/#ueber-uns', label: t.nav.ueberUns },
+    { href: '/#kontakt', label: t.nav.kontakt },
   ];
 
   return (
@@ -73,9 +67,16 @@ export function Header() {
           open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none',
         )}
       >
-        {/* logo top-left */}
-        <div className="flex items-center px-5 pt-5">
+        {/* top bar: logo + close */}
+        <div className="flex items-center justify-between px-5 pt-5">
           <Logo />
+          <button
+            onClick={() => setOpen(false)}
+            aria-label="Menu schliessen"
+            className="rounded-full p-2 text-white/80 transition hover:bg-white/10 hover:text-white"
+          >
+            <X className="h-7 w-7" />
+          </button>
         </div>
 
         {/* centered nav */}
@@ -86,19 +87,6 @@ export function Header() {
               href={l.href}
               onClick={() => setOpen(false)}
               className="text-2xl font-bold uppercase tracking-widest text-white/90 transition hover:text-white"
-            >
-              {l.label}
-            </a>
-          ))}
-
-          <div className="my-2 h-px w-20 bg-white/20" />
-
-          {subLinks.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              onClick={() => setOpen(false)}
-              className="text-sm uppercase tracking-wider text-white/50 transition hover:text-white/80"
             >
               {l.label}
             </a>
