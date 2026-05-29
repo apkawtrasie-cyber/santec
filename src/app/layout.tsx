@@ -28,9 +28,10 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/logo.santec.png',
-        width: 1200,
-        height: 630,
+        width: 1000,
+        height: 300,
         alt: 'Santec Group – Sanierung & Gebäudetechnik',
+        type: 'image/png',
       },
     ],
   },
