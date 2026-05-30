@@ -14,30 +14,64 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 export const metadata: Metadata = {
   metadataBase: new URL(env.siteUrl),
   title: {
-    default: 'Santec Group – Sanierung & Gebäudetechnik',
+    default: 'Santec Group GmbH – Asbestsanierung & Gebäudetechnik Schweiz',
     template: '%s | Santec Group',
   },
   description:
-    'Santec Group – Professionelle Sanierung und zukunftsorientierte Gebäudetechnik. Sicher. Sauber. Nachhaltig.',
+    'Santec Group GmbH – Ihr zertifizierter Schweizer Partner für Asbest- & Schadstoffsanierung, Rückbau, Lüftung, Klima, Sanitär, Elektroinstallation und Photovoltaik. SUVA-konform. Sicher. Sauber. Nachhaltig.',
+  keywords: [
+    'Asbestsanierung Schweiz',
+    'Schadstoffsanierung',
+    'Rückbau',
+    'Gebäudetechnik',
+    'Lüftung Klima',
+    'Sanitär',
+    'Elektroinstallation',
+    'Photovoltaik',
+    'SUVA',
+    'Rüti ZH',
+    'Santec Group',
+    'Sanierung Zürich',
+    'PCB Sanierung',
+    'KMF Sanierung',
+    'Brandschadensanierung',
+  ],
+  authors: [{ name: 'Santec Group GmbH', url: env.siteUrl }],
+  creator: 'Santec Group GmbH',
+  publisher: 'Santec Group GmbH',
+  category: 'business',
+  applicationName: 'Santec Group',
+  formatDetection: { telephone: true, email: true, address: true },
   robots: robotsMeta(),
+  alternates: {
+    canonical: env.siteUrl,
+    languages: {
+      'de-CH': env.siteUrl,
+      'fr-CH': env.siteUrl,
+      'it-CH': env.siteUrl,
+      'en': env.siteUrl,
+    },
+  },
   openGraph: {
     type: 'website',
     locale: 'de_CH',
+    alternateLocale: ['fr_CH', 'it_CH', 'en_US'],
     url: env.siteUrl,
-    siteName: 'Santec Group',
-    images: [
-      {
-        url: '/logo.santec.png',
-        width: 1000,
-        height: 300,
-        alt: 'Santec Group – Sanierung & Gebäudetechnik',
-        type: 'image/png',
-      },
-    ],
+    siteName: 'Santec Group GmbH',
+    title: 'Santec Group GmbH – Asbestsanierung & Gebäudetechnik Schweiz',
+    description:
+      'Zertifizierte Asbest- & Schadstoffsanierung, Rückbau und moderne Gebäudetechnik in der ganzen Schweiz. SUVA-konform, termingerecht, nachhaltig.',
   },
   twitter: {
     card: 'summary_large_image',
-    images: ['/logo.santec.png'],
+    title: 'Santec Group GmbH – Sanierung & Gebäudetechnik',
+    description:
+      'Zertifizierte Asbestsanierung und Gebäudetechnik in der Schweiz. SUVA-konform.',
+  },
+  icons: {
+    icon: '/icon.png',
+    apple: '/apple-icon.png',
+    shortcut: '/favicon.png',
   },
 };
 
