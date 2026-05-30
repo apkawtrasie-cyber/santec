@@ -27,7 +27,7 @@ export function WhatsAppChat() {
   };
 
   return (
-    <div className="fixed bottom-20 right-6 z-50 flex flex-col items-end gap-3">
+    <div className="pointer-events-none fixed bottom-20 right-6 z-50 flex flex-col items-end gap-3">
       {/* Chat window */}
       <div
         className={`w-80 overflow-hidden rounded-2xl shadow-2xl transition-all duration-300 ${
@@ -91,11 +91,11 @@ export function WhatsAppChat() {
       </div>
 
       {/* Floating button */}
-      <div className="relative">
+      <div className="pointer-events-auto relative">
         {/* Pulse ring */}
         {!isOpen && (
           <span
-            className="absolute inset-0 animate-ping rounded-full opacity-60"
+            className="pointer-events-none absolute inset-0 animate-ping rounded-full opacity-60"
             style={{ backgroundColor: '#25D366' }}
           />
         )}
