@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import { I18nProvider } from '@/i18n/I18nProvider';
 import { CookieBanner } from '@/components/ui/CookieBanner';
+import { InAppBrowserBanner } from '@/components/ui/InAppBrowserBanner';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { buildLocalBusinessJsonLd, robotsMeta } from '@/lib/seo';
 import { WhatsAppChat } from '@/components/WhatsAppChat';
@@ -90,6 +91,7 @@ export default function RootLayout({
     <html lang={DEFAULT_LOCALE} className={inter.variable}>
       <body className="font-sans antialiased">
         <I18nProvider>
+          <InAppBrowserBanner />
           {children}
           <CookieBanner />
           <WhatsAppChat />
