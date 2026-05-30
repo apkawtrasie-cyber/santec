@@ -5,7 +5,7 @@
  */
 
 export const env = {
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000',
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://santecgroup.ch',
   allowIndexing:
     (process.env.NEXT_PUBLIC_ALLOW_INDEXING ?? 'false').toLowerCase() === 'true',
   recaptchaSiteKey: process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? '',
